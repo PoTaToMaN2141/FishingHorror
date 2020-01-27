@@ -745,7 +745,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d37c89bebb47d94e8f47a8c531d2b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 5
+  mouseSensitivity: 50
+  player: {fileID: 1629894917}
 --- !u!1 &1629894916
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,7 +880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034150988}
   m_LocalRotation: {x: 0.69875926, y: -0, z: -0, w: 0.7153569}
-  m_LocalPosition: {x: -0.33, y: -2.05, z: 4.43}
+  m_LocalPosition: {x: -0.33, y: -0.47, z: 4.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

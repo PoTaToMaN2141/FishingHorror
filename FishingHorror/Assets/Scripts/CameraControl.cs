@@ -14,31 +14,37 @@ public class CameraControl : MonoBehaviour
     [SerializeField]
     private float mouseSensitivity;
 
-    //value to get camera's transform
-    private Transform cameraTransform;
+    //field for player's transform
+    [SerializeField]
+    private Transform player;
+
+    //fields to store final x and y rotation values
+    private float xRot = 0f;
+    private float yRot = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        //initialize rotation
-        cameraTransform = gameObject.transform;
+        //TODO: Move cursor lock to a game state manager later
+        //lock cursor to the center of the screen
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //set vertical mouse movement
-        cameraTransform.Rotate((-Input.GetAxis("Mouse Y") + yClampMin) * mouseSensitivity, 0, 0);
+        //store mouse x and y axis movement and adjust for mouse sensitivity and framerate
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        //set horizontal mouse movement
-        cameraTransform.Rotate(0, (Input.GetAxis("Mouse X") + xClampMin) * mouseSensitivity, 0);
+        //calculate mouse movement
+        xRot -= mouseY;
+        xRot = Mathf.Clamp(xRot, -85f, 55f);
+        yRot -= mouseX;
+        yRot = Mathf.Clamp(yRot, -140f, 130f);
+        transform.localRotation = Quaternion.Euler(xRot, -yRot, 0f);
 
-        //clamp rotation
-        cameraTransform.rotation = Quaternion.Euler(Mathf.Clamp(cameraTransform.rotation.x, xClampMin, xClampMax), Mathf.Clamp(cameraTransform.rotation.y, yClampMin, yClampMax), 0f);
-
-        //debug euler angles
-        Debug.Log(cameraTransform.rotation);
-        Debug.Log("mouse y:" + Input.GetAxis("Mouse Y"));
-        Debug.Log("mouse x:" + Input.GetAxis("Mouse X"));
+        //debug x rotation and y rotation
+        Debug.Log("Y rotation: " + xRot + "\nX rotation: " + yRot);
     }
 }
