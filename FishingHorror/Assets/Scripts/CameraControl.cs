@@ -45,6 +45,6 @@ public class CameraControl : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRot, -yRot, 0f);
 
         //debug x rotation and y rotation
-        Debug.Log("Y rotation: " + xRot + "\nX rotation: " + yRot);
+        //Debug.Log("Y rotation: " + xRot + "\nX rotation: " + yRot);
     }
 }

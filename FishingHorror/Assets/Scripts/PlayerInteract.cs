@@ -24,20 +24,34 @@ public class PlayerInteract : MonoBehaviour
         //create raycast hit
         RaycastHit hit;
 
-        //send out a raycast to check for interactable objects
-        Physics.Raycast(transform.position, transform.forward, out hit, interactDistance);
         //debug raycast
-        Debug.DrawRay(transform.position, transform.forward * interactDistance, Color.green);
+        Debug.DrawRay(transform.position, transform.forward * interactDistance, Color.yellow);
 
-        //check if the raycast is hitting an interactable object
-        if(interactables.interactableList.Contains(hit.transform.gameObject))
+        //send out a raycast to check for interactable objects
+        if (Physics.Raycast(transform.position, transform.forward, out hit, interactDistance))
         {
-            //run the hover method to show the name of the object and the action that can be performed by hitting the interact key
+            //debug raycast
+            Debug.DrawRay(transform.position, transform.forward * interactDistance, Color.yellow);
+            Debug.Log("hitting an object");
+
+            //store the gameobject that the raycast hit
+            GameObject hitObject = hit.transform.gameObject;
+
+            //check if the raycast is hitting an interactable object
+            if (interactables.interactableList.Contains(hitObject.GetComponent<InteractableObject>()))
+            {
+                //run the hover method to show the name of the object and the action that can be performed by hitting the interact key
+                ObjectHover(hitObject.GetComponent<InteractableObject>());
+
+                //debug hitting the object with a raycast
+                Debug.Log("looking at the " + hitObject.GetComponent<InteractableObject>().name);
+            }
         }
     }
 
-    private void ObjectHover(GameObject interactable)
+    private void ObjectHover(InteractableObject interactable)
     {
+        //TODO: display the name of the object on screen
 
     }
 }

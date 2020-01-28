@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Interactable Objects
   m_EditorClassIdentifier: 
   interactableList:
-  - {fileID: 0}
+  - {fileID: 8662537167561961631, guid: 86ebabdb2af6a884383ffcd02ebe63e1, type: 3}
