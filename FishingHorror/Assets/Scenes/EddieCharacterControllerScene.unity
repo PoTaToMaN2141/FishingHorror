@@ -149,7 +149,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 0.626744, g: 0.51366144, b: 0.9150943, a: 1}
+  m_Color: {r: 0.50201684, g: 0.36040404, b: 0.8584906, a: 1}
   m_Intensity: 3.1415927
   m_Range: 10
   m_SpotAngle: 30
@@ -321,6 +321,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1463510832, guid: 978eaa034aad51045916747b59615588, type: 3}
+      propertyPath: backgroundColorHDR.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463510832, guid: 978eaa034aad51045916747b59615588, type: 3}
+      propertyPath: backgroundColorHDR.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463510832, guid: 978eaa034aad51045916747b59615588, type: 3}
+      propertyPath: backgroundColorHDR.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1322324568529147057, guid: 978eaa034aad51045916747b59615588,
         type: 3}
       propertyPath: m_Name
