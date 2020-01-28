@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerInteract : MonoBehaviour
 {
-    //reference to the scriptable object that contains all interactable objects
-    [SerializeField]
-    private Interactables interactables;
-
     //field for interaction distance
     [SerializeField]
     private float interactDistance;
+
+    //field to hold a reference to the UI Text
+    [SerializeField]
+    private TextMeshProUGUI screenText;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,12 @@ public class PlayerInteract : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //debug to list out the interactables list
+        //foreach(InteractableObject interactable in interactables.interactableList)
+        //{
+            //Debug.Log("Interactables: " + interactable.name);
+        //}
+
         //create raycast hit
         RaycastHit hit;
 
@@ -38,7 +46,7 @@ public class PlayerInteract : MonoBehaviour
             GameObject hitObject = hit.transform.gameObject;
 
             //check if the raycast is hitting an interactable object
-            if (interactables.interactableList.Contains(hitObject.GetComponent<InteractableObject>()))
+            if (hitObject.GetComponent<InteractableObject>())
             {
                 //run the hover method to show the name of the object and the action that can be performed by hitting the interact key
                 ObjectHover(hitObject.GetComponent<InteractableObject>());
@@ -47,11 +55,16 @@ public class PlayerInteract : MonoBehaviour
                 Debug.Log("looking at the " + hitObject.GetComponent<InteractableObject>().name);
             }
         }
+        else
+        {
+            //TODO: clear text from the screen
+            screenText.text = "";
+        }
     }
 
     private void ObjectHover(InteractableObject interactable)
     {
         //TODO: display the name of the object on screen
-
+        screenText.text = interactable.name + "\nPress 'E' to interact";
     }
 }
