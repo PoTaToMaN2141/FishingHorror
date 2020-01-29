@@ -14,6 +14,9 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI screenText;
 
+    //field for the last interactable object the player looked at
+    private GameObject lastInteractable;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,14 +54,31 @@ public class PlayerInteract : MonoBehaviour
                 //run the hover method to show the name of the object and the action that can be performed by hitting the interact key
                 ObjectHover(hitObject.GetComponent<InteractableObject>());
 
+                //store the hit object as the last interactable the player looked at
+                lastInteractable = hitObject;
+
                 //debug hitting the object with a raycast
                 Debug.Log("looking at the " + hitObject.GetComponent<InteractableObject>().name);
+            }
+            else
+            {
+                //TODO: clear text from the screen
+                if (lastInteractable != null)
+                {
+                    lastInteractable.GetComponentInChildren<FadeText>().TextFade(false);
+                }
             }
         }
         else
         {
             //TODO: clear text from the screen
-            screenText.text = "";
+            //screenText.text = "";
+
+            //check if the player has looked at an interactable object yet and if it's still active
+            if(lastInteractable != null)
+            {
+                lastInteractable.GetComponentInChildren<FadeText>().TextFade(false);
+            }
         }
     }
 
@@ -67,8 +87,14 @@ public class PlayerInteract : MonoBehaviour
         //TODO: display the name of the object on screen
         //screenText.text = interactable.name + "\nPress 'E' to interact";
 
-        TextMesh objectText = interactable.gameObject.GetComponentInChildren<TextMesh>(true);
+        if(interactable.gameObject.GetComponentInChildren<FadeText>().fadeDirection == false)
+        {
+            interactable.gameObject.GetComponentInChildren<FadeText>().TextFade(true);
+        }
+    }
 
-        objectText.gameObject.SetActive(true);
+    private void EndObjectHover()
+    {
+
     }
 }
