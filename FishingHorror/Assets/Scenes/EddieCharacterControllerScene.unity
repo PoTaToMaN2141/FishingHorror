@@ -399,6 +399,11 @@ PrefabInstance:
       propertyPath: backgroundColorHDR.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1176891551207495786, guid: 978eaa034aad51045916747b59615588,
+        type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1462343211}
     - target: {fileID: 1322324568529147057, guid: 978eaa034aad51045916747b59615588,
         type: 3}
       propertyPath: m_Name
@@ -465,6 +470,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: cc2cd9ede5836db4d99b7de188b4ceeb,
         type: 2}
+    - target: {fileID: 6550735780883464032, guid: 978eaa034aad51045916747b59615588,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8251296274700466348, guid: 978eaa034aad51045916747b59615588,
         type: 3}
       propertyPath: m_RootOrder

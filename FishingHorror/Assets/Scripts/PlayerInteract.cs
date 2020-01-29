@@ -65,6 +65,10 @@ public class PlayerInteract : MonoBehaviour
     private void ObjectHover(InteractableObject interactable)
     {
         //TODO: display the name of the object on screen
-        screenText.text = interactable.name + "\nPress 'E' to interact";
+        //screenText.text = interactable.name + "\nPress 'E' to interact";
+
+        TextMesh objectText = interactable.gameObject.GetComponentInChildren<TextMesh>(true);
+
+        objectText.gameObject.SetActive(true);
     }
 }
