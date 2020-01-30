@@ -120,6 +120,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &23852140 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1629894916, guid: 978eaa034aad51045916747b59615588,
+    type: 3}
+  m_PrefabInstance: {fileID: 586254450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &23852143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23852140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fd28afe6bbcfa74dac5c67a15087486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerState: 0
 --- !u!1 &335612057
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +629,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactDistance: 1.5
-  screenText: {fileID: 2054158661}
 --- !u!1 &1804013941 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6550735780883464032, guid: 978eaa034aad51045916747b59615588,
@@ -629,6 +647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8067f6b516d63240b6bdcfc1bd35db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeDirection: 0
   fadeTime: 1
 --- !u!1 &2034150988
 GameObject:

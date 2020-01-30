@@ -42,7 +42,7 @@ public class FadeText : MonoBehaviour
                 text.color = Color.Lerp(text.color, opaque, fadeTick);
 
                 //debug for fading text
-                Debug.Log("Text has faded in");
+                //Debug.Log("Text has faded in");
             }
             else if(fadeDirection == false)
             {
@@ -50,7 +50,7 @@ public class FadeText : MonoBehaviour
                 text.color = Color.Lerp(text.color, transparent, fadeTick);
 
                 //debug for fading text
-                Debug.Log("Text has faded out");
+                //Debug.Log("Text has faded out");
             }
 
             //increment fade tick

@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
+    
+
     //values for clamping the camera's x and y values
     private float xClampMin = -85f;
     private float xClampMax = 55f;
     private float yClampMin = -140f;
-    private float yClampMax = 130f;
+    private float yClampMax = 140f;
 
     //float for mouse sensitivity
     [SerializeField]
@@ -37,14 +39,24 @@ public class CameraControl : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        //calculate mouse movement
+        //calculate vertical mouse movement
         xRot -= mouseY;
         xRot = Mathf.Clamp(xRot, xClampMin, xClampMax);
-        yRot -= mouseX;
-        yRot = Mathf.Clamp(yRot, yClampMin, yClampMax);
-        transform.localRotation = Quaternion.Euler(xRot, -yRot, 0f);
 
-        //debug x rotation and y rotation
-        //Debug.Log("Y rotation: " + xRot + "\nX rotation: " + yRot);
+        //calculate horizontal mouse movement if camera is restricted
+        if(SetPlayerState.instance.playerState != PlayerState.Walking)
+        {
+            //clamp horizontal camera rotation
+            yRot -= mouseX;
+            yRot = Mathf.Clamp(yRot, yClampMin, yClampMax);
+        }
+        else
+        {
+            //allow full camera and body rotation on the horizontal axis
+            player.Rotate(Vector3.up * mouseX);
+        }
+
+        //apply rotation
+        transform.localRotation = Quaternion.Euler(xRot, -yRot, 0f);
     }
 }

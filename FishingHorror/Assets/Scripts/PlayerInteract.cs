@@ -10,10 +10,6 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField]
     private float interactDistance;
 
-    //field to hold a reference to the UI Text
-    [SerializeField]
-    private TextMeshProUGUI screenText;
-
     //field for the last interactable object the player looked at
     private GameObject lastInteractable;
 
@@ -26,25 +22,15 @@ public class PlayerInteract : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //debug to list out the interactables list
-        //foreach(InteractableObject interactable in interactables.interactableList)
-        //{
-            //Debug.Log("Interactables: " + interactable.name);
-        //}
-
         //create raycast hit
         RaycastHit hit;
 
         //debug raycast
-        Debug.DrawRay(transform.position, transform.forward * interactDistance, Color.yellow);
+        //Debug.DrawRay(transform.position, transform.forward * interactDistance, Color.yellow);
 
         //send out a raycast to check for interactable objects
         if (Physics.Raycast(transform.position, transform.forward, out hit, interactDistance))
         {
-            //debug raycast
-            Debug.DrawRay(transform.position, transform.forward * interactDistance, Color.yellow);
-            Debug.Log("hitting an object");
-
             //store the gameobject that the raycast hit
             GameObject hitObject = hit.transform.gameObject;
 
@@ -87,10 +73,5 @@ public class PlayerInteract : MonoBehaviour
         {
             interactable.gameObject.GetComponentInChildren<FadeText>().TextFade(true);
         }
-    }
-
-    private void EndObjectHover()
-    {
-
     }
 }
