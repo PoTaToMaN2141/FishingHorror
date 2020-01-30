@@ -5,10 +5,10 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {
     //values for clamping the camera's x and y values
-    private float xClampMin = 45f;
-    private float xClampMax = 270f;
-    private float yClampMin = 140f;
-    private float yClampMax = 220f;
+    private float xClampMin = -85f;
+    private float xClampMax = 55f;
+    private float yClampMin = -140f;
+    private float yClampMax = 130f;
 
     //float for mouse sensitivity
     [SerializeField]
@@ -39,9 +39,9 @@ public class CameraControl : MonoBehaviour
 
         //calculate mouse movement
         xRot -= mouseY;
-        xRot = Mathf.Clamp(xRot, -85f, 55f);
+        xRot = Mathf.Clamp(xRot, xClampMin, xClampMax);
         yRot -= mouseX;
-        yRot = Mathf.Clamp(yRot, -140f, 130f);
+        yRot = Mathf.Clamp(yRot, yClampMin, yClampMax);
         transform.localRotation = Quaternion.Euler(xRot, -yRot, 0f);
 
         //debug x rotation and y rotation

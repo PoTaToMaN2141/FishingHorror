@@ -35,18 +35,19 @@ public class FadeText : MonoBehaviour
         //check if fade tick is less than 1
         if(fadeTick <= 1)
         {
+            //fade the text if it hasn't been faded already
             if (fadeDirection == true)
             {
                 //lerp text's transparency to make it visible
-                text.color = Color.Lerp(transparent, opaque, fadeTick);
+                text.color = Color.Lerp(text.color, opaque, fadeTick);
 
                 //debug for fading text
                 Debug.Log("Text has faded in");
             }
-            else
+            else if(fadeDirection == false)
             {
                 //lerp text's transparency to make it invisible
-                text.color = Color.Lerp(opaque, transparent, fadeTick);
+                text.color = Color.Lerp(text.color, transparent, fadeTick);
 
                 //debug for fading text
                 Debug.Log("Text has faded out");

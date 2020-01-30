@@ -63,7 +63,7 @@ public class PlayerInteract : MonoBehaviour
             else
             {
                 //TODO: clear text from the screen
-                if (lastInteractable != null)
+                if (lastInteractable != null && lastInteractable.GetComponentInChildren<FadeText>().fadeDirection == true)
                 {
                     lastInteractable.GetComponentInChildren<FadeText>().TextFade(false);
                 }
@@ -72,10 +72,8 @@ public class PlayerInteract : MonoBehaviour
         else
         {
             //TODO: clear text from the screen
-            //screenText.text = "";
-
             //check if the player has looked at an interactable object yet and if it's still active
-            if(lastInteractable != null)
+            if(lastInteractable != null && lastInteractable.GetComponentInChildren<FadeText>().fadeDirection == true)
             {
                 lastInteractable.GetComponentInChildren<FadeText>().TextFade(false);
             }
@@ -85,8 +83,6 @@ public class PlayerInteract : MonoBehaviour
     private void ObjectHover(InteractableObject interactable)
     {
         //TODO: display the name of the object on screen
-        //screenText.text = interactable.name + "\nPress 'E' to interact";
-
         if(interactable.gameObject.GetComponentInChildren<FadeText>().fadeDirection == false)
         {
             interactable.gameObject.GetComponentInChildren<FadeText>().TextFade(true);
