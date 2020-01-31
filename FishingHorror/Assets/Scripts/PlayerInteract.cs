@@ -34,24 +34,24 @@ public class PlayerInteract : MonoBehaviour
             //store the gameobject that the raycast hit
             GameObject hitObject = hit.transform.gameObject;
 
-            //check if the raycast is hitting an interactable object
-            if (hitObject.GetComponent<InteractableObject>())
+            //check if the raycast is hitting 3D text
+            if (hitObject.GetComponent<TextMesh>())
             {
                 //run the hover method to show the name of the object and the action that can be performed by hitting the interact key
-                ObjectHover(hitObject.GetComponent<InteractableObject>());
+                ObjectHover(hitObject);
 
                 //store the hit object as the last interactable the player looked at
                 lastInteractable = hitObject;
 
                 //debug hitting the object with a raycast
-                Debug.Log("looking at the " + hitObject.GetComponent<InteractableObject>().name);
+                Debug.Log("looking at the " + hitObject.GetComponentInParent<InteractableObject>().name);
             }
             else
             {
                 //TODO: clear text from the screen
-                if (lastInteractable != null && lastInteractable.GetComponentInChildren<FadeText>().fadeDirection == true)
+                if (lastInteractable != null && lastInteractable.GetComponent<FadeText>().fadeDirection == true)
                 {
-                    lastInteractable.GetComponentInChildren<FadeText>().TextFade(false);
+                    lastInteractable.GetComponent<FadeText>().TextFade(false);
                 }
             }
         }
@@ -66,12 +66,12 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
-    private void ObjectHover(InteractableObject interactable)
+    private void ObjectHover(GameObject text)
     {
         //TODO: display the name of the object on screen
-        if(interactable.gameObject.GetComponentInChildren<FadeText>().fadeDirection == false)
+        if(text.GetComponent<FadeText>().fadeDirection == false)
         {
-            interactable.gameObject.GetComponentInChildren<FadeText>().TextFade(true);
+            text.GetComponent<FadeText>().TextFade(true);
         }
     }
 }
