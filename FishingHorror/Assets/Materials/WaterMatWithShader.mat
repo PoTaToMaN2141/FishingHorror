@@ -241,7 +241,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_5A913E64: {r: 0.3372549, g: 1, b: 0.5647059, a: 1}
-    - Color_839B0CC7: {r: 0.20942406, g: 8.586387, b: 1.591623, a: 0}
+    - Color_839B0CC7: {r: 0.44367486, g: 16.94838, b: 3.194459, a: 0}
     - Color_AC6FF721: {r: 0.3584906, g: 0, b: 0.005645518, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}

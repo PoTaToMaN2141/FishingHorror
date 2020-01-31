@@ -29,12 +29,18 @@ public class BoatRock : MonoBehaviour
         AdjustBoat();
     }
 
+    /// <summary>
+    /// Sets the sinTime and sinTime2 variables
+    /// </summary>
     void AdjustSinTime()
     {
         sinTime = Mathf.Sin(Time.time);
         sinTime2 = Mathf.Sin(Time.time + sinDifference);
     }
 
+    /// <summary>
+    /// Adjusts the transform of the boat to be equal to sinTime-sinTime2 * the moveAmplifier
+    /// </summary>
     void AdjustBoat()
     {
         boatTransform = boat.transform.rotation.eulerAngles;
