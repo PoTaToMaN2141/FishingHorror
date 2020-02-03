@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class ThrowableObject : InteractableObject
 {
     // Start is called before the first frame update
     void Start()
@@ -14,5 +14,18 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    /// <summary>
+    /// picks up the throwable object
+    /// </summary>
+    protected override void Activate()
+    {
+        
+    }
+
+    public void Throw()
+    {
+
     }
 }
