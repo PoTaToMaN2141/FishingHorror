@@ -145,12 +145,12 @@ public class Reeling : MonoBehaviour
             //The player matches the current position of the rod to the fish
             //So if the fish is on the right of the screen, the player leans to the right.
             //If it's in the center, they lean to the center
-            MatchDirection();
+            //MatchDirection();
 
             //The player goes to the opposite side of the screen of the fish
             //So if the fish is on the left, the player leans right
             //If the fish is in the center, the player goes center.
-            //OppositeDirection();
+            OppositeDirection();
 
             //Timer used for seeing if the fish is escaping; gets reset every time the player reels the fish closer
             escapeTimer = 0f;
