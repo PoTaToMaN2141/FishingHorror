@@ -10,6 +10,19 @@ public class ThrowableObject : InteractableObject
     //field for the object's rigidbody
     private Rigidbody rigidbody;
 
+    //field for the angle to the left or right at which the object will be held by the player, in degrees
+    [SerializeField]
+    private float holdAngle;
+
+    //field for the distance away from the player the object will be held
+    [SerializeField]
+    private float holdDistance;
+
+    //fields for input delay timers to prevent the plyaer from immediately dropping the fish
+    [SerializeField]
+    private float inputWaitTime;
+    private float inputWaitTick;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +38,12 @@ public class ThrowableObject : InteractableObject
         //check if the object is throwable and then check for input
         if(isThrowable == true)
         {
-            //match object's transform to the player's "hand" in the item space and parent it to the camera (or the player depending on how the viewmodel will work)
-            transform.position = WorldManager.instance.playerCamera.transform.position;
-            transform.rotation = WorldManager.instance.playerCamera.transform.rotation;
+            //show object that player is holding in front of them
+            Vector3 holdVector = WorldManager.instance.player.transform.forward.normalized;
+            holdVector = Quaternion.AngleAxis(holdAngle, Vector3.up) * holdVector;
+            holdVector *= holdDistance;
+            transform.position = WorldManager.instance.player.transform.position + holdVector;
+            transform.forward = Vector3.up;
 
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
@@ -35,10 +51,16 @@ public class ThrowableObject : InteractableObject
             }
             
             //drop object if the "E" key is pressed again
-            if(Input.GetKeyUp(KeyCode.E))
+            if(inputWaitTick <= 0)
             {
-                //Drop();
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Drop();
+                }
             }
+
+            //decrement input wait tick
+            inputWaitTick -= Time.deltaTime / inputWaitTime;
         }
     }
 
@@ -52,11 +74,14 @@ public class ThrowableObject : InteractableObject
 
         //set throwability to true
         isThrowable = true;
+
+        //start input wait
+        inputWaitTick = 1;
     }
 
     public void Throw()
     {
-
+        
     }
 
     /// <summary>

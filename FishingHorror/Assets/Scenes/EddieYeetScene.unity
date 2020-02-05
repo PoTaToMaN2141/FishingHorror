@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDirection: 0
-  fadeTime: 0
+  fadeTime: 1
 --- !u!65 &77556768
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -555,6 +555,10 @@ PrefabInstance:
       propertyPath: backgroundColorHDR.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1629894917, guid: 978eaa034aad51045916747b59615588, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.164
+      objectReference: {fileID: 0}
     - target: {fileID: 1176891551207495786, guid: 978eaa034aad51045916747b59615588,
         type: 3}
       propertyPath: playerCamera
@@ -713,6 +717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1857730998254634298, guid: 978eaa034aad51045916747b59615588, type: 3}
+    - {fileID: 476703345059745305, guid: 978eaa034aad51045916747b59615588, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 978eaa034aad51045916747b59615588, type: 3}
 --- !u!1 &586254451 stripped
 GameObject:
@@ -857,7 +862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c31683ef6beb12b4e80972897059afad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDistance: 1.5
+  interactDistance: 2
 --- !u!1 &1804013941 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6550735780883464032, guid: 978eaa034aad51045916747b59615588,
@@ -1015,6 +1020,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Fish
+  holdAngle: 30
+  holdDistance: 2
+  inputWaitTime: 0.3
 --- !u!1 &2034150988
 GameObject:
   m_ObjectHideFlags: 0

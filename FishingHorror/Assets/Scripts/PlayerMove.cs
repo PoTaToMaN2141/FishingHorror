@@ -28,7 +28,10 @@ public class PlayerMove : MonoBehaviour
         //get a movement vector based on saved movement axes
         Vector3 movementVector = transform.right.normalized * moveX + transform.forward.normalized * moveZ;
 
-        //move the character with the character controller
-        controller.Move(movementVector * playerSpeed * Time.deltaTime);
+        //move the character with the character controller if the player isn't fishing
+        if(SetPlayerState.instance.playerState != PlayerState.Fishing)
+        {
+            controller.Move(movementVector * playerSpeed * Time.deltaTime);
+        }
     }
 }
