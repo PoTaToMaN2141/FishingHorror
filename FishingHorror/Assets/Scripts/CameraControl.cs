@@ -16,10 +16,6 @@ public class CameraControl : MonoBehaviour
     [SerializeField]
     private float mouseSensitivity;
 
-    //field for player's transform
-    [SerializeField]
-    private Transform player;
-
     //fields to store final x and y rotation values
     private float xRot = 0f;
     private float yRot = 0f;
@@ -53,7 +49,7 @@ public class CameraControl : MonoBehaviour
         else
         {
             //allow full camera and body rotation on the horizontal axis
-            player.Rotate(Vector3.up * mouseX);
+            WorldManager.instance.player.transform.Rotate(Vector3.up * mouseX);
         }
 
         //apply rotation

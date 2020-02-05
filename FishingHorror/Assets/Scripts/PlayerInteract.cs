@@ -65,7 +65,7 @@ public class PlayerInteract : MonoBehaviour
                 //fade text out
                 if (lastInteractable != null && lastInteractable.GetComponentInChildren<FadeText>().fadeDirection == true)
                 {
-                    lastInteractable.GetComponent<FadeText>().TextFade(false);
+                    lastInteractable.GetComponentInChildren<FadeText>().TextFade(false);
                 }
 
                 //set interaction bool to false

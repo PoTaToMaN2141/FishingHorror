@@ -7,7 +7,7 @@ public class ThrowableObject : InteractableObject
     //field for a bool to check if the object is throwable
     private bool isThrowable = false;
 
-    //field for the object's rigidbodt
+    //field for the object's rigidbody
     private Rigidbody rigidbody;
 
     // Start is called before the first frame update
@@ -25,15 +25,19 @@ public class ThrowableObject : InteractableObject
         //check if the object is throwable and then check for input
         if(isThrowable == true)
         {
-            if(Input.GetKeyDown(KeyCode.Mouse0))
+            //match object's transform to the player's "hand" in the item space and parent it to the camera (or the player depending on how the viewmodel will work)
+            transform.position = WorldManager.instance.playerCamera.transform.position;
+            transform.rotation = WorldManager.instance.playerCamera.transform.rotation;
+
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 //TODO: throw object
             }
             
             //drop object if the "E" key is pressed again
-            if(Input.GetKeyDown(KeyCode.E))
+            if(Input.GetKeyUp(KeyCode.E))
             {
-
+                //Drop();
             }
         }
     }
@@ -46,11 +50,6 @@ public class ThrowableObject : InteractableObject
         //turn off gravity on the throwable object
         rigidbody.useGravity = false;
 
-        //match object's transform to the player's "hand" in the item space and parent it to the camera (or the player depending on how the viewmodel will work)
-        transform.position = WorldManager.instance.playerCamera.GetComponentInChildren<Transform>().position;
-        transform.rotation = WorldManager.instance.playerCamera.GetComponentInChildren<Transform>().rotation;
-        transform.SetParent(WorldManager.instance.playerCamera.transform);
-
         //set throwability to true
         isThrowable = true;
     }
@@ -60,11 +59,11 @@ public class ThrowableObject : InteractableObject
 
     }
 
+    /// <summary>
+    /// drops the object by reactivating gravity and setting throwable bool to false
+    /// </summary>
     public void Drop()
     {
-        //unparent the object from the camera/player 
-        transform.parent = null;
-
         //turn gravity back on for the object
         rigidbody.useGravity = true;
 
