@@ -18,6 +18,14 @@ public class ThrowableObject : InteractableObject
     [SerializeField]
     private float holdDistance;
 
+    //field for the angle upwards at which the object will be thrown when held by the player
+    [SerializeField]
+    private float throwAngle;
+
+    //field for the force the object should be thrown with
+    [SerializeField]
+    private float throwForce;
+
     //fields for input delay timers to prevent the plyaer from immediately dropping the fish
     [SerializeField]
     private float inputWaitTime;
@@ -48,6 +56,7 @@ public class ThrowableObject : InteractableObject
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 //TODO: throw object
+                Throw();
             }
             
             //drop object if the "E" key is pressed again
@@ -85,8 +94,12 @@ public class ThrowableObject : InteractableObject
         Drop();
 
         //get a vector for applying force based on the player's forward angle
-        Vector3 throwVector = WorldManager.instance.playerCamera.transform.forward;
+        Vector3 throwVector = WorldManager.instance.playerCamera.transform.forward.normalized;
+        throwVector = Quaternion.AngleAxis(throwAngle, WorldManager.instance.playerCamera.transform.right) * throwVector;
+        throwVector *= throwForce;
 
+        //apply the vector as a force on the object
+        rigidbody.AddForce(throwVector, ForceMode.Impulse);
     }
 
     /// <summary>

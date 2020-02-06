@@ -1022,6 +1022,8 @@ MonoBehaviour:
   name: Fish
   holdAngle: 30
   holdDistance: 2
+  throwAngle: -20
+  throwForce: 50
   inputWaitTime: 0.3
 --- !u!1 &2034150988
 GameObject:
