@@ -81,7 +81,12 @@ public class ThrowableObject : InteractableObject
 
     public void Throw()
     {
-        
+        //drop the object before applying force
+        Drop();
+
+        //get a vector for applying force based on the player's forward angle
+        Vector3 throwVector = WorldManager.instance.playerCamera.transform.forward;
+
     }
 
     /// <summary>
