@@ -6,5 +6,5 @@ public abstract class InteractableObject : MonoBehaviour
 {
     public string name;
 
-    protected abstract void Activate();
+    public abstract void Activate();
 }

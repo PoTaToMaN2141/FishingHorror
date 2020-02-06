@@ -13,6 +13,9 @@ public class PlayerInteract : MonoBehaviour
     //field for the last interactable object the player looked at
     private GameObject lastInteractable;
 
+    //bool to check if the player is looking at an interactable object
+    private bool canInteract = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,35 +43,62 @@ public class PlayerInteract : MonoBehaviour
                 //run the hover method to show the name of the object and the action that can be performed by hitting the interact key
                 ObjectHover(hitObject);
 
-                //store the hit object as the last interactable the player looked at
-                lastInteractable = hitObject;
+                //store the hit object's parent as the last interactable the player looked at
+                lastInteractable = hitObject.GetComponentInParent<InteractableObject>().gameObject;
+
+                //set interaction bool to true
+                canInteract = true;
 
                 //debug hitting the object with a raycast
                 Debug.Log("looking at the " + hitObject.GetComponentInParent<InteractableObject>().name);
             }
+            else if(hitObject.GetComponentInParent<InteractableObject>())
+            {
+                //store the hit object's parent as the last interactable the player looked at
+                lastInteractable = hitObject.GetComponentInParent<InteractableObject>().gameObject;
+
+                //set interaction bool to true
+                canInteract = true;
+            }
             else
             {
-                //TODO: clear text from the screen
-                if (lastInteractable != null && lastInteractable.GetComponent<FadeText>().fadeDirection == true)
+                //fade text out
+                if (lastInteractable != null && lastInteractable.GetComponentInChildren<FadeText>().fadeDirection == true)
                 {
-                    lastInteractable.GetComponent<FadeText>().TextFade(false);
+                    lastInteractable.GetComponentInChildren<FadeText>().TextFade(false);
                 }
+
+                //set interaction bool to false
+                canInteract = false;
             }
         }
         else
         {
-            //TODO: clear text from the screen
+            //fade text out
             //check if the player has looked at an interactable object yet and if it's still active
             if(lastInteractable != null && lastInteractable.GetComponentInChildren<FadeText>().fadeDirection == true)
             {
                 lastInteractable.GetComponentInChildren<FadeText>().TextFade(false);
+            }
+
+            //set interaction bool to false
+            canInteract = false;
+        }
+
+        //check if the player can interact with an object, then check for player input
+        if(canInteract == true)
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                //activate the interactable
+                lastInteractable.GetComponent<InteractableObject>().Activate();
             }
         }
     }
 
     private void ObjectHover(GameObject text)
     {
-        //TODO: display the name of the object on screen
+        //fade object text in
         if(text.GetComponent<FadeText>().fadeDirection == false)
         {
             text.GetComponent<FadeText>().TextFade(true);
