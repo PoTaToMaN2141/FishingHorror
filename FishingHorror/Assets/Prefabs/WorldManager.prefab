@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1322324568529147059}
   - component: {fileID: 1322324568529147058}
+  - component: {fileID: 2695373659771118029}
   m_Layer: 0
   m_Name: WorldManager
   m_TagString: Untagged
@@ -49,6 +50,20 @@ MonoBehaviour:
   sinDifference: 4.2
   boat: {fileID: 1322324567976485731}
   waterPlane: {fileID: 0}
+--- !u!114 &2695373659771118029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322324568529147057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 593ef6710ac11644299e923b391be3da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerCamera: {fileID: 0}
 --- !u!1001 &1042771353970841071
 PrefabInstance:
   m_ObjectHideFlags: 0
