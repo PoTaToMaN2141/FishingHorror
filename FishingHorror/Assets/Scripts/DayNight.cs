@@ -104,7 +104,7 @@ public class DayNight : MonoBehaviour
             }
         }
         
-        Debug.Log("Current Time: " + GetTime() + ", " + CurrentTime);
+        //Debug.Log("Current Time: " + GetTime() + ", " + CurrentTime);
         directionalLight.color = lightColor.Evaluate(PercentTime);
         directionalLight.intensity = lightIntensity.Evaluate(PercentTime).r;
 
