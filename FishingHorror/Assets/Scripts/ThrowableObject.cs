@@ -5,30 +5,31 @@ using UnityEngine;
 public class ThrowableObject : InteractableObject
 {
     //field for a bool to check if the object is throwable
-    private bool isThrowable = false;
+    [SerializeField]
+    protected bool isThrowable = false;
 
     //field for the object's rigidbody
-    private Rigidbody rigidbody;
+    protected Rigidbody rigidbody;
 
     //field for the angle to the left or right at which the object will be held by the player, in degrees
     [SerializeField]
-    private float holdAngle;
+    protected float holdAngle;
 
     //field for the distance away from the player the object will be held
     [SerializeField]
-    private float holdDistance;
+    protected float holdDistance;
 
     //field for the angle upwards at which the object will be thrown when held by the player
     [SerializeField]
-    private float throwAngle;
+    protected float throwAngle;
 
     //field for the force the object should be thrown with
     [SerializeField]
-    private float throwForce;
+    protected float throwForce;
 
     //fields for input delay timers to prevent the plyaer from immediately dropping the fish
     [SerializeField]
-    private float inputWaitTime;
+    protected float inputWaitTime;
     private float inputWaitTick;
 
     // Start is called before the first frame update
@@ -59,10 +60,12 @@ public class ThrowableObject : InteractableObject
                 Throw();
             }
             
-            //drop object if the "E" key is pressed again
+
+            //OLD: drop object if the "E" key is pressed again
+            //CURRENT: drop object if the user right clicked
             if(inputWaitTick <= 0)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.Mouse1))
                 {
                     Drop();
                 }

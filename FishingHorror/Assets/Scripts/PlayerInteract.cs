@@ -50,7 +50,7 @@ public class PlayerInteract : MonoBehaviour
                 canInteract = true;
 
                 //debug hitting the object with a raycast
-                Debug.Log("looking at the " + hitObject.GetComponentInParent<InteractableObject>().name);
+              //  Debug.Log("looking at the " + hitObject.GetComponentInParent<InteractableObject>().name);
             }
             else if(hitObject.GetComponentInParent<InteractableObject>())
             {
