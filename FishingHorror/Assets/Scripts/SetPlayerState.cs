@@ -34,7 +34,7 @@ public class SetPlayerState : MonoBehaviour
     void Update()
     {
         //Debug for player state changes
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             //switch statement to rotate through player states
             switch (playerState)

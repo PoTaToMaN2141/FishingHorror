@@ -17,7 +17,7 @@ public class Radio : InteractableObject
         //TODO: check if the radio is on and play sound if it is
     }
 
-    protected override void Activate()
+    public override void Activate()
     {
         //TODO: turn radio on/off when activated
     }
