@@ -83,7 +83,7 @@ public class ThrowableObject : InteractableObject
     public override void Activate()
     {
         //disable 3D text on throwable/holdable object
-        gameObject.GetComponentInChildren<FadeText>().gameObject.SetActive(false);
+        gameObject.GetComponentInChildren<FadeText>(true).gameObject.SetActive(false);
 
         //turn off gravity on the throwable object
         rigidbody.useGravity = false;
@@ -115,7 +115,7 @@ public class ThrowableObject : InteractableObject
     public void Drop()
     {
         //enable 3D text on throwable/holdable object
-        gameObject.GetComponentInChildren<FadeText>().gameObject.SetActive(true);
+        gameObject.GetComponentInChildren<FadeText>(true).gameObject.SetActive(true);
 
         //turn gravity back on for the object
         rigidbody.useGravity = true;

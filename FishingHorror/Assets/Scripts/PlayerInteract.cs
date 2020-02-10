@@ -55,7 +55,7 @@ public class PlayerInteract : MonoBehaviour
             else if(hitObject.GetComponent<InteractableObject>())
             {
                 //run object hover on child 3d text
-                ObjectHover(hitObject.GetComponentInChildren<FadeText>().gameObject);
+                ObjectHover(hitObject.GetComponentInChildren<FadeText>(true).gameObject);
 
                 //store the hit object's parent as the last interactable the player looked at
                 lastInteractable = hitObject;
@@ -66,9 +66,9 @@ public class PlayerInteract : MonoBehaviour
             else
             {
                 //fade text out
-                if (lastInteractable != null && lastInteractable.GetComponentInChildren<FadeText>().fadeDirection == true)
+                if (lastInteractable != null && lastInteractable.GetComponentInChildren<FadeText>(true).fadeDirection == true)
                 {
-                    lastInteractable.GetComponentInChildren<FadeText>().TextFade(false);
+                    lastInteractable.GetComponentInChildren<FadeText>(true).TextFade(false);
                 }
 
                 //set interaction bool to false
@@ -79,9 +79,9 @@ public class PlayerInteract : MonoBehaviour
         {
             //fade text out
             //check if the player has looked at an interactable object yet and if it's still active
-            if(lastInteractable != null && lastInteractable.GetComponentInChildren<FadeText>().fadeDirection == true)
+            if(lastInteractable != null && lastInteractable.GetComponentInChildren<FadeText>(true).fadeDirection == true)
             {
-                lastInteractable.GetComponentInChildren<FadeText>().TextFade(false);
+                lastInteractable.GetComponentInChildren<FadeText>(true).TextFade(false);
             }
 
             //set interaction bool to false
