@@ -982,19 +982,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 586254450}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1462343217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1462343211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c31683ef6beb12b4e80972897059afad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactDistance: 2
 --- !u!1 &1804013941 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6550735780883464032, guid: 978eaa034aad51045916747b59615588,

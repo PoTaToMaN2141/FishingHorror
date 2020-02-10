@@ -34,7 +34,17 @@ public class JustinsPlayerController : MonoBehaviour
     private float angle = 0;
 
     private Vector2 moveInput;
+    public Vector2 MoveInput
+    {
+        get { return moveInput; }
+    }
+
     private Vector2 lookInput;
+    public Vector2 LookInput
+    { 
+        get { return lookInput; }
+    }
+
 
     #region Unity Functions
 

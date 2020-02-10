@@ -12,7 +12,7 @@ public class CameraControl : MonoBehaviour
     private float yClampMin = -140f;
     private float yClampMax = 140f;
 
-    //float for mouse sensitivity
+    //TODO: CHANGE float for mouse sensitivity to Vector2
     [SerializeField]
     private float mouseSensitivity;
 
@@ -32,8 +32,8 @@ public class CameraControl : MonoBehaviour
     void Update()
     {
         //store mouse x and y axis movement and adjust for mouse sensitivity and framerate
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseX = WorldManager.instance.player.GetComponent<JustinsPlayerController>().LookInput.x * mouseSensitivity * Time.deltaTime;
+        float mouseY = WorldManager.instance.player.GetComponent<JustinsPlayerController>().LookInput.y * mouseSensitivity * Time.deltaTime;
 
         //calculate vertical mouse movement
         xRot -= mouseY;
