@@ -226,7 +226,7 @@ TextMesh:
 
     Press "E" to Pick Up'
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.8
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0

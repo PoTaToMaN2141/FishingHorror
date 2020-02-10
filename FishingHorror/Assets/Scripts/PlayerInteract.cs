@@ -50,12 +50,15 @@ public class PlayerInteract : MonoBehaviour
                 canInteract = true;
 
                 //debug hitting the object with a raycast
-              //  Debug.Log("looking at the " + hitObject.GetComponentInParent<InteractableObject>().name);
+                //Debug.Log("looking at the " + hitObject.GetComponentInParent<InteractableObject>().name);
             }
-            else if(hitObject.GetComponentInParent<InteractableObject>())
+            else if(hitObject.GetComponent<InteractableObject>())
             {
+                //run object hover on child 3d text
+                ObjectHover(hitObject.GetComponentInChildren<FadeText>().gameObject);
+
                 //store the hit object's parent as the last interactable the player looked at
-                lastInteractable = hitObject.GetComponentInParent<InteractableObject>().gameObject;
+                lastInteractable = hitObject;
 
                 //set interaction bool to true
                 canInteract = true;

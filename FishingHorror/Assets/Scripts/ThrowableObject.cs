@@ -74,6 +74,7 @@ public class ThrowableObject : InteractableObject
             //decrement input wait tick
             inputWaitTick -= Time.deltaTime / inputWaitTime;
         }
+        
     }
 
     /// <summary>
@@ -81,6 +82,9 @@ public class ThrowableObject : InteractableObject
     /// </summary>
     public override void Activate()
     {
+        //disable 3D text on throwable/holdable object
+        gameObject.GetComponentInChildren<FadeText>().gameObject.SetActive(false);
+
         //turn off gravity on the throwable object
         rigidbody.useGravity = false;
 
@@ -110,6 +114,9 @@ public class ThrowableObject : InteractableObject
     /// </summary>
     public void Drop()
     {
+        //enable 3D text on throwable/holdable object
+        gameObject.GetComponentInChildren<FadeText>().gameObject.SetActive(true);
+
         //turn gravity back on for the object
         rigidbody.useGravity = true;
 
