@@ -5,10 +5,11 @@ using UnityEngine;
 public class DayNight : MonoBehaviour
 {
     private float time;
+    private float cycleDuration = 86400; //Seconds in a day
     [SerializeField, Tooltip("The time of day to start at as a percentage from 0 to 1. (0 is noon)")]
     private float startTime;
-    [SerializeField, Tooltip("The length of the day night cycle in seconds.")]
-    private float cycleDuration;
+    [SerializeField, Tooltip("The speed of the day night cycle as a multiple of normal time.")]
+    private float timeSpeed;
     [SerializeField, Tooltip("Gradient representing the light color based on time of day.")]
     private Gradient lightColor;
     [SerializeField, Tooltip("Gradient representing the light intensity based on time of day, should only be in grayscale.")]
@@ -27,7 +28,12 @@ public class DayNight : MonoBehaviour
         set
         {
             //Ensure that the time is within one cycle;
-            time = value % cycleDuration;
+            time = value;
+
+            if(value > cycleDuration)
+            {
+                value = cycleDuration;
+            }
         }
     }
 
@@ -90,7 +96,7 @@ public class DayNight : MonoBehaviour
     {
         if (!Paused)
         {
-            time += Time.deltaTime;
+            time += Time.deltaTime * timeSpeed;
 
             if (time > cycleDuration)
             {
@@ -98,7 +104,7 @@ public class DayNight : MonoBehaviour
             }
         }
         
-        Debug.Log("Current Time: " + GetTime());
+        //Debug.Log("Current Time: " + GetTime() + ", " + CurrentTime);
         directionalLight.color = lightColor.Evaluate(PercentTime);
         directionalLight.intensity = lightIntensity.Evaluate(PercentTime).r;
 

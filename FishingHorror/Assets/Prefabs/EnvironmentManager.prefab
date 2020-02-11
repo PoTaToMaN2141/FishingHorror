@@ -238,7 +238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8aacf3352a81c4491163827691ad48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cycleDuration: 1000
+  startTime: 0
+  timeSpeed: 1
   lightColor:
     serializedVersion: 2
     key0: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}

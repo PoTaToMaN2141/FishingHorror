@@ -27,6 +27,13 @@ public class Reeling : MonoBehaviour
     //Timer used for counting down until fish tries to escape
     public float escapeTimer = 0f;
 
+    //the max distance the fish can be before the line starts to break
+    public float breakOffRange = 40f;
+
+    //Values for reeling to deduct the fish's distance by
+    public float goodReel = .5f;
+    public float badReel = .1f;
+
     void Start()
     {
         //Set the positions and grab the fish script
@@ -136,11 +143,15 @@ public class Reeling : MonoBehaviour
         //TODO: GET HEURISTIC ON REELING
         if (Input.mouseScrollDelta.y > 0 || Input.mouseScrollDelta.y < 0)
         {
-            //===THREE WAYS TO GO ABOUT FISHING===
+            //===FOUR WAYS TO GO ABOUT FISHING===
             
             //The player matches the fishes' direction consistently
             //If the fish is going left, the player left clicks. if it's staying still, the player goes center
-            //FollowDirection();
+            FollowDirection();
+
+            //The player matches the fishes' direction consistently
+            //If the fish is going left, the player right clicks. if it's staying still, the player goes center
+            //FightDirection();
 
             //The player matches the current position of the rod to the fish
             //So if the fish is on the right of the screen, the player leans to the right.
@@ -150,7 +161,7 @@ public class Reeling : MonoBehaviour
             //The player goes to the opposite side of the screen of the fish
             //So if the fish is on the left, the player leans right
             //If the fish is in the center, the player goes center.
-            OppositeDirection();
+            //OppositeDirection();
 
             //Timer used for seeing if the fish is escaping; gets reset every time the player reels the fish closer
             escapeTimer = 0f;
@@ -165,11 +176,11 @@ public class Reeling : MonoBehaviour
             //Currently this value is hard-coded at 3 seconds
             if (escapeTimer >= 3f)
             {
-                fishScript.escaping = true;
+               fishScript.escaping = true;
             }
 
             //If the fish gets far enough away, the line starts to break
-            if (Vector3.Distance(gameObject.transform.position, bobber.transform.position) > 20f)
+            if (bobber.transform.position.z > breakOffRange)
             {
                 stress += 1;
             }
@@ -184,7 +195,7 @@ public class Reeling : MonoBehaviour
         if (curPosition == fishScript.curDirection)
         {
             //The distance they reel is much higher
-            fishPos.z -= .1f;
+            fishPos.z -= goodReel;
             //The line's stress decrases
             if (stress > 0) stress -= 2;
             //The fish moves to the pole
@@ -194,7 +205,7 @@ public class Reeling : MonoBehaviour
         else
         {
             //The fish draws closer, but at a much smaller amount
-            fishPos.z -= .02f;
+            fishPos.z -= badReel;
             //The line's stress incrases by the fish's strength
             //TO DO?: MAKE THIS A HEURISITC?
             stress += fishScript.strength;
@@ -204,6 +215,33 @@ public class Reeling : MonoBehaviour
         }
     }
 
+    //The player fights against the fishes' direction consistently
+    //If the fish is going left, the player right clicks. if it's staying still, the player goes center
+    void FightDirection()
+    {
+        //If the direction the player is in is the same as the fish, they are properly reeling
+        if (curPosition == fishScript.curDirection*-1)
+        {
+            //The distance they reel is much higher
+            fishPos.z -= goodReel;
+            //The line's stress decrases
+            if (stress > 0) stress -= 2;
+            //The fish moves to the pole
+            MoveToPole();
+        }
+        //The player hasn't properly reeled
+        else
+        {
+            //The fish draws closer, but at a much smaller amount
+            fishPos.z -= badReel;
+            //The line's stress incrases by the fish's strength
+            //TO DO?: MAKE THIS A HEURISITC?
+            stress += fishScript.strength;
+
+            //The line's stress has gotten to high and it snapped
+            if (stress >= 100) snapped = true;
+        }
+    }
 
     //The player matches the current position of the rod to the fish
     //So if the fish is on the right of the screen, the player leans to the right.
@@ -220,7 +258,7 @@ public class Reeling : MonoBehaviour
         && (fishPos.x < dirSections && curPosition == 0)))
         {
             //The distance they reel is much higher
-            fishPos.z -= .1f;
+            fishPos.z -= goodReel;
             //The line's stress decrases
             if (stress > 0) stress -= 2;
             //The fish moves to the pole
@@ -230,7 +268,7 @@ public class Reeling : MonoBehaviour
         else
         {
             //The fish draws closer, but at a much smaller amount
-            fishPos.z -= .02f;
+            fishPos.z -= badReel;
             //The line's stress incrases by the fish's strength
             //TO DO?: MAKE THIS A HEURISITC?
             stress += fishScript.strength;
@@ -256,7 +294,7 @@ public class Reeling : MonoBehaviour
         && (fishPos.x < dirSections && curPosition == 0)))
         {
             //The distance they reel is much higher
-            fishPos.z -= .1f;
+            fishPos.z -= goodReel;
             //The line's stress decrases
             if (stress > 0) stress -= 2;
             //The fish moves to the pole
@@ -266,7 +304,7 @@ public class Reeling : MonoBehaviour
         else
         {
             //The fish draws closer, but at a much smaller amount
-            fishPos.z -= .02f;
+            fishPos.z -= badReel;
             //The line's stress incrases by the fish's strength
             //TO DO?: MAKE THIS A HEURISITC?
             stress += fishScript.strength;
@@ -308,5 +346,15 @@ public class Reeling : MonoBehaviour
         //If the fish is caught, the game's won
         text = (!caught ? "Fishing!" : "CAUGHT!");
         text = GUI.TextField(new Rect(10, 90, 210, 30), text, 100);
+
+        //Explain rules
+        text = "Left + Right click to move";
+        text = GUI.TextField(new Rect(950, 30, 210, 30), text, 100);
+
+        text = "Change the reeling type";
+        text = GUI.TextField(new Rect(950, 60, 210, 30), text, 100);
+
+        text = "in the 'Reel()' function";
+        text = GUI.TextField(new Rect(950, 90, 210, 30), text, 100);
     }
 }

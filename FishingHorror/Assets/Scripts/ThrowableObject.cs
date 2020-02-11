@@ -5,22 +5,31 @@ using UnityEngine;
 public class ThrowableObject : InteractableObject
 {
     //field for a bool to check if the object is throwable
-    private bool isThrowable = false;
+    [SerializeField]
+    protected bool isThrowable = false;
 
     //field for the object's rigidbody
-    private Rigidbody rigidbody;
+    protected Rigidbody rigidbody;
 
     //field for the angle to the left or right at which the object will be held by the player, in degrees
     [SerializeField]
-    private float holdAngle;
+    protected float holdAngle;
 
     //field for the distance away from the player the object will be held
     [SerializeField]
-    private float holdDistance;
+    protected float holdDistance;
+
+    //field for the angle upwards at which the object will be thrown when held by the player
+    [SerializeField]
+    protected float throwAngle;
+
+    //field for the force the object should be thrown with
+    [SerializeField]
+    protected float throwForce;
 
     //fields for input delay timers to prevent the plyaer from immediately dropping the fish
     [SerializeField]
-    private float inputWaitTime;
+    protected float inputWaitTime;
     private float inputWaitTick;
 
     // Start is called before the first frame update
@@ -48,12 +57,15 @@ public class ThrowableObject : InteractableObject
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 //TODO: throw object
+                Throw();
             }
             
-            //drop object if the "E" key is pressed again
+
+            //OLD: drop object if the "E" key is pressed again
+            //CURRENT: drop object if the user right clicked
             if(inputWaitTick <= 0)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.Mouse1))
                 {
                     Drop();
                 }
@@ -62,6 +74,7 @@ public class ThrowableObject : InteractableObject
             //decrement input wait tick
             inputWaitTick -= Time.deltaTime / inputWaitTime;
         }
+        
     }
 
     /// <summary>
@@ -69,6 +82,9 @@ public class ThrowableObject : InteractableObject
     /// </summary>
     public override void Activate()
     {
+        //disable 3D text on throwable/holdable object
+        gameObject.GetComponentInChildren<FadeText>(true).gameObject.SetActive(false);
+
         //turn off gravity on the throwable object
         rigidbody.useGravity = false;
 
@@ -81,7 +97,16 @@ public class ThrowableObject : InteractableObject
 
     public void Throw()
     {
-        
+        //drop the object before applying force
+        Drop();
+
+        //get a vector for applying force based on the player's forward angle
+        Vector3 throwVector = WorldManager.instance.playerCamera.transform.forward.normalized;
+        throwVector = Quaternion.AngleAxis(throwAngle, WorldManager.instance.playerCamera.transform.right) * throwVector;
+        throwVector *= throwForce;
+
+        //apply the vector as a force on the object
+        rigidbody.AddForce(throwVector, ForceMode.Impulse);
     }
 
     /// <summary>
@@ -89,6 +114,9 @@ public class ThrowableObject : InteractableObject
     /// </summary>
     public void Drop()
     {
+        //enable 3D text on throwable/holdable object
+        gameObject.GetComponentInChildren<FadeText>(true).gameObject.SetActive(true);
+
         //turn gravity back on for the object
         rigidbody.useGravity = true;
 
