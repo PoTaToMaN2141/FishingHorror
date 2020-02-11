@@ -6,6 +6,7 @@ public class BoatRock : MonoBehaviour
 {
     public float moveAmplifier; //A multiplier for the water swell so we can line it up with the boat
     public float sinDifference; //A delay for our second sin wave so we can set up a rotational difference
+    public float totalSinOut;
     private float sinTime; //A reference to the sin of our current time
     private float sinTime2; //A reference to the sin of our time - the sinDifference
 
@@ -15,6 +16,9 @@ public class BoatRock : MonoBehaviour
 
     [SerializeField]
     private GameObject waterPlane; //A reference to our water
+
+    [SerializeField]
+    private MoveScript moveScript;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +31,7 @@ public class BoatRock : MonoBehaviour
     {
         AdjustSinTime();
         AdjustBoat();
+        moveScript.Move();
     }
 
     /// <summary>
@@ -36,6 +41,7 @@ public class BoatRock : MonoBehaviour
     {
         sinTime = Mathf.Sin(Time.time);
         sinTime2 = Mathf.Sin(Time.time + sinDifference);
+        totalSinOut = (sinTime - sinTime2) * moveAmplifier;
     }
 
     /// <summary>
@@ -44,7 +50,7 @@ public class BoatRock : MonoBehaviour
     void AdjustBoat()
     {
         boatTransform = boat.transform.rotation.eulerAngles;
-        boatTransform = new Vector3(boatTransform.x, boatTransform.y, (sinTime - sinTime2) * moveAmplifier);
+        boatTransform = new Vector3(boatTransform.x, boatTransform.y, totalSinOut);
         boat.transform.rotation = Quaternion.Euler(boatTransform);
     }
 }

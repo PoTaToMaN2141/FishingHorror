@@ -21,6 +21,11 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+    }
+
+    public void Move()
+    {
         //get horizontal and vertical input axes
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
@@ -29,7 +34,7 @@ public class PlayerMove : MonoBehaviour
         Vector3 movementVector = transform.right.normalized * moveX + transform.forward.normalized * moveZ;
 
         //move the character with the character controller if the player isn't fishing
-        if(SetPlayerState.instance.playerState != PlayerState.Fishing)
+        if (SetPlayerState.instance.playerState != PlayerState.Fishing)
         {
             controller.Move(movementVector * playerSpeed * Time.deltaTime);
         }

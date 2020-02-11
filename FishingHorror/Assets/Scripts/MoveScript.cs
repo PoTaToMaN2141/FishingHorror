@@ -9,8 +9,18 @@ public class MoveScript : MonoBehaviour
 
     private Vector2 addVector;
 
+    [SerializeField]
+    private Transform parentTransform;
+
+    [SerializeField]
+    private Transform boatHolder;
+
+    [SerializeField]
+    private BoatRock boatRock;
+
     private Vector2 forwardAxes;
     private Vector2 rightAxes;
+    private float distance;
 
     // Start is called before the first frame update
     void Start()
@@ -22,35 +32,46 @@ public class MoveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        forwardAxes.x = -transform.right.z;
-        forwardAxes.y = transform.forward.z;
-        rightAxes.x = -transform.right.x;
-        rightAxes.y = transform.forward.x;
+        
+    }
 
-        if (Input.GetKey(KeyCode.W))
+    public void Move()
+    {
+        if (SetPlayerState.instance.playerState != PlayerState.Fishing)
         {
-            addVector.y += 1;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            addVector.y -= 1;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            addVector.x -= 1;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            addVector.x += 1;
-        }
+            //parentTransform.up = boatHolder.up;
+            forwardAxes.x = -parentTransform.right.z;
+            forwardAxes.y = parentTransform.forward.z;
+            rightAxes.x = -parentTransform.right.x;
+            rightAxes.y = parentTransform.forward.x;
 
-        addVector = (addVector.x * -rightAxes) + (addVector.y * forwardAxes);
+            if (Input.GetKey(KeyCode.W))
+            {
+                addVector.y += 1;
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                addVector.y -= 1;
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                addVector.x -= 1;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                addVector.x += 1;
+            }
 
-        addVector.Normalize();
+            addVector = (addVector.x * -rightAxes) + (addVector.y * forwardAxes);
 
-        addVector = addVector * moveSpeed;
+            addVector.Normalize();
 
-        transform.position = new Vector3(transform.position.x + addVector.x, transform.position.y, transform.position.z + addVector.y);
-        addVector = Vector2.zero;
+            addVector = addVector * moveSpeed;
+
+            distance = (parentTransform.position.x - boatHolder.position.x) + (parentTransform.position.z - boatHolder.position.z);
+
+            parentTransform.position = new Vector3(parentTransform.position.x + addVector.x, boatRock.totalSinOut/2 * distance + boatHolder.position.y, parentTransform.position.z + addVector.y);
+            addVector = Vector2.zero;
+        }
     }
 }
