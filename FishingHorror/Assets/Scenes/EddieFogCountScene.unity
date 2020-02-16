@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.04583091, g: 0.060551837, b: 0.0830202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -664,6 +664,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &938609110 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1322324567976485735, guid: 978eaa034aad51045916747b59615588,
+    type: 3}
+  m_PrefabInstance: {fileID: 1322324568661892432}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1710916989
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,6 +782,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1629894917, guid: 978eaa034aad51045916747b59615588, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.143
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629894917, guid: 978eaa034aad51045916747b59615588, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.244
+      objectReference: {fileID: 0}
     - target: {fileID: 1806554887, guid: 978eaa034aad51045916747b59615588, type: 3}
       propertyPath: player
       value: 
@@ -865,7 +879,39 @@ PrefabInstance:
       propertyPath: boatRock
       value: 
       objectReference: {fileID: 1741711001}
-    m_RemovedComponents: []
+    - target: {fileID: 4116021760786297210, guid: 978eaa034aad51045916747b59615588,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.503
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116021760786297210, guid: 978eaa034aad51045916747b59615588,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116021760786297210, guid: 978eaa034aad51045916747b59615588,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.504
+      objectReference: {fileID: 0}
+    - target: {fileID: 5849252138464655361, guid: 978eaa034aad51045916747b59615588,
+        type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: cac6a3e387f5c66419e307122aa716ea,
+        type: 3}
+    - target: {fileID: 5849252138464655361, guid: 978eaa034aad51045916747b59615588,
+        type: 3}
+      propertyPath: m_DefaultActionMap
+      value: Walking
+      objectReference: {fileID: 0}
+    - target: {fileID: 5849252138464655361, guid: 978eaa034aad51045916747b59615588,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1322324568661892441}
+    m_RemovedComponents:
+    - {fileID: 5558997867135977546, guid: 978eaa034aad51045916747b59615588, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 978eaa034aad51045916747b59615588, type: 3}
 --- !u!1 &1322324568661892433 stripped
 GameObject:
@@ -898,3 +944,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishThresholdList: 010000000300000003000000
+--- !u!4 &1322324568661892437 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4116021760786297210, guid: 978eaa034aad51045916747b59615588,
+    type: 3}
+  m_PrefabInstance: {fileID: 1322324568661892432}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1322324568661892438 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8857586042225746782, guid: 978eaa034aad51045916747b59615588,
+    type: 3}
+  m_PrefabInstance: {fileID: 1322324568661892432}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1322324568661892439 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5706005091902663353, guid: 978eaa034aad51045916747b59615588,
+    type: 3}
+  m_PrefabInstance: {fileID: 1322324568661892432}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1322324568661892440 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7770447294419549184, guid: 978eaa034aad51045916747b59615588,
+    type: 3}
+  m_PrefabInstance: {fileID: 1322324568661892432}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1322324568661892441 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1463510830, guid: 978eaa034aad51045916747b59615588,
+    type: 3}
+  m_PrefabInstance: {fileID: 1322324568661892432}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1322324568661892450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322324568661892435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71df8483bd1ebba4bbb11dfcaab9e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origin: {fileID: 1322324568661892437}
+  right: {fileID: 1322324568661892439}
+  forward: {fileID: 1322324568661892438}
+  up: {fileID: 1322324568661892440}
+  moveSpeed: 5
+  moveForce: 100
+  lookSensetivity: {x: 2.5, y: 1}
+  boatTransform: {fileID: 938609110}
+  lookTarget: {fileID: 0}
