@@ -384,11 +384,6 @@ PrefabInstance:
       propertyPath: m_DefaultControlScheme
       value: Mouse and Keyboard
       objectReference: {fileID: 0}
-    - target: {fileID: 7265640283813609207, guid: af9cb5a21a3312c49809531bf7b1e673,
-        type: 3}
-      propertyPath: m_Actions
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af9cb5a21a3312c49809531bf7b1e673, type: 3}
 --- !u!1 &5049500819726901668 stripped
