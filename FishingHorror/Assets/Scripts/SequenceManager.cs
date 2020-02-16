@@ -26,10 +26,10 @@ public class SequenceManager : MonoBehaviour
             
 
             //increase fish threshold
-            nextThreshold += fishThresholdList[0];
+            //nextThreshold += fishThresholdList[0];
 
             //remove first member of the fish threshold list
-            fishThresholdList.RemoveAt(0);
+            //fishThresholdList.RemoveAt(0);
         }
     }
 }

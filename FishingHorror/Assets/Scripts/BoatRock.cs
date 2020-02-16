@@ -31,7 +31,7 @@ public class BoatRock : MonoBehaviour
     {
         AdjustSinTime();
         AdjustBoat();
-        moveScript.Move();
+        //moveScript.Move();
     }
 
     /// <summary>
