@@ -18,7 +18,7 @@ public class BoatRock : MonoBehaviour
     private GameObject waterPlane; //A reference to our water
 
     [SerializeField]
-    private MoveScript moveScript;
+    private PlayerMove moveScript;
 
     // Start is called before the first frame update
     void Start()
