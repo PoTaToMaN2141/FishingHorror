@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 335612058}
   - component: {fileID: 335612061}
   - component: {fileID: 335612060}
+  - component: {fileID: 335612062}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -407,12 +408,98 @@ MonoBehaviour:
   kernelSize: 5
   lightAngle: 1
   maxDepthBias: 0.001
+--- !u!114 &335612062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335612057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8aacf3352a81c4491163827691ad48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTime: 0
+  timeSpeed: 3600
+  lightColor:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+    key1: {r: 1, g: 0.7132816, b: 0.41037738, a: 1}
+    key2: {r: 1, g: 0.500555, b: 0.41037738, a: 0}
+    key3: {r: 0.4487323, g: 0.3329477, b: 0.8113208, a: 0}
+    key4: {r: 0.3176163, g: 0.29076186, b: 0.509434, a: 0}
+    key5: {r: 0.39972824, g: 0.33259168, b: 0.6981132, a: 0}
+    key6: {r: 0.57916516, g: 0.6832009, b: 0.8962264, a: 0}
+    key7: {r: 1, g: 0.95686275, b: 0.8392157, a: 0}
+    ctime0: 16384
+    ctime1: 19661
+    ctime2: 24248
+    ctime3: 29491
+    ctime4: 37779
+    ctime5: 46067
+    ctime6: 49922
+    ctime7: 58982
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 8
+    m_NumAlphaKeys: 2
+  lightIntensity:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
+    key2: {r: 1, g: 1, b: 1, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 24672
+    ctime1: 36237
+    ctime2: 50501
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  directionalLight: {fileID: 335612058}
 --- !u!1 &350461530 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5049500819726901668, guid: 978eaa034aad51045916747b59615588,
     type: 3}
   m_PrefabInstance: {fileID: 1322324568661892432}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &350461534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350461530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be024a87b6a73ae459a05a7c3935cdd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpeed: 50
 --- !u!1 &512837848
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,6 +987,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.504
       objectReference: {fileID: 0}
+    - target: {fileID: 5049500819726901690, guid: 978eaa034aad51045916747b59615588,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5049500819726901691, guid: 978eaa034aad51045916747b59615588,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5849252138464655361, guid: 978eaa034aad51045916747b59615588,
         type: 3}
       propertyPath: m_Actions
@@ -918,6 +1015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5558997867135977546, guid: 978eaa034aad51045916747b59615588, type: 3}
+    - {fileID: 5730065681228774046, guid: 978eaa034aad51045916747b59615588, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 978eaa034aad51045916747b59615588, type: 3}
 --- !u!1 &1322324568661892433 stripped
 GameObject:
@@ -937,4 +1035,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1936eda7065ba4428d9b2bca6b649d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishThresholdList: 010000000300000003000000
+  fishThresholdList: 01000000030000000300000002000000
+  timeThresholdList: 60540000a08c000000e1000020fd0000
+  timeObject: {fileID: 335612057}
