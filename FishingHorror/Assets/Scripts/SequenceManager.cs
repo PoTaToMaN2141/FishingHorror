@@ -34,7 +34,16 @@ public class SequenceManager : MonoBehaviour
         {
             //TODO: allow time to advance to next stage
             //TODO: If time hasn't completely passed from the previous stage, quickly advance it forward
-            DayNight.Paused = false;
+            if(DayNight.Paused != true)
+            {
+                //increase the speed of time
+                timeCycle.TimeSpeed = 4000f;
+                Debug.Log("Speeding up time to match the player");
+            }
+            else
+            {
+                DayNight.Paused = false;
+            }
 
             //increase fish threshold
             nextThreshold += fishThresholdList[0];
@@ -55,6 +64,10 @@ public class SequenceManager : MonoBehaviour
             //pause time and set new time threshold
             DayNight.Paused = true;
             timeThresholdList.RemoveAt(0);
+
+            //reset time cycle scale
+            //TODO: change this to match actual scale instead of test scale
+            timeCycle.TimeSpeed = 3600f;
         }
     }
 }

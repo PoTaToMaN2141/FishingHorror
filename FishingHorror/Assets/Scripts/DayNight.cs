@@ -47,6 +47,15 @@ public class DayNight : MonoBehaviour
     }
 
     /// <summary>
+    /// The time speed is how many seconds time moves per second
+    /// </summary>
+    public float TimeSpeed
+    {
+        get { return timeSpeed; }
+        set { timeSpeed = value; }
+    }
+
+    /// <summary>
     /// Boolean used to pause the day night cycle
     /// </summary>
     public static bool Paused { get; set; }
