@@ -5,7 +5,7 @@ using UnityEngine;
 public class SequenceManager : MonoBehaviour
 {
     //field for the next threshold of fish the player has to catch to advance to the next sequence
-    private int nextThreshold = 0;
+    private int nextFishThreshold = 0;
 
     //list of fish thresholds based on events the player experiences
     public List<int> fishThresholdList;
@@ -19,18 +19,29 @@ public class SequenceManager : MonoBehaviour
     private GameObject timeObject;
     private DayNight timeCycle;
 
+    //field for the scriptable object that contains the library of the games' fish
+    [SerializeField]
+    private FishLibrary fishLibrary;
+    private Dictionary<int, List<GameObject>> library = new Dictionary<int, List<GameObject>>();
+
     // Start is called before the first frame update
     void Start()
     {
         //save reference to time cycle
         timeCycle = timeObject.GetComponent<DayNight>();
+
+        //set up fish library
+        library[0] = fishLibrary.stageOneFish;
+        library[1] = fishLibrary.stageTwoFish;
+        library[2] = fishLibrary.stageThreeFish;
+        library[3] = fishLibrary.stageFourFish;
     }
 
     // Update is called once per frame
     void Update()
     {
         //TODO: check fish count to determine whether or not to start next stage of the game
-        if(CountFish.instance.fishCount == nextThreshold)
+        if(CountFish.instance.fishCount == nextFishThreshold)
         {
             //TODO: allow time to advance to next stage
             //TODO: If time hasn't completely passed from the previous stage, quickly advance it forward
@@ -46,8 +57,8 @@ public class SequenceManager : MonoBehaviour
             }
 
             //increase fish threshold
-            nextThreshold += fishThresholdList[0];
-            Debug.Log("Next Threshold for Fish: " + nextThreshold + "\nFish Count: " + CountFish.instance.fishCount);
+            nextFishThreshold += fishThresholdList[0];
+            Debug.Log("Next Threshold for Fish: " + nextFishThreshold + "\nFish Count: " + CountFish.instance.fishCount);
 
             //remove first member of the fish threshold list
             fishThresholdList.RemoveAt(0);
