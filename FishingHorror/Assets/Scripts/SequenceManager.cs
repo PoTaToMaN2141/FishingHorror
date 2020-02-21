@@ -24,6 +24,10 @@ public class SequenceManager : MonoBehaviour
     private FishLibrary fishLibrary;
     private Dictionary<int, List<GameObject>> library = new Dictionary<int, List<GameObject>>();
 
+    //field for the radio
+    [SerializeField]
+    private GameObject radio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +68,10 @@ public class SequenceManager : MonoBehaviour
             fishThresholdList.RemoveAt(0);
 
             //TODO: change the kinds of fish the player can catch
+
+            //TODO: play an audio clip based on the sequence the player is in
+            radio.GetComponent<Radio>().PlaySequenceClip(0);
+            radio.GetComponent<Radio>().sequenceClips.RemoveAt(0);
         }
 
         //check if the current time has reached the stopping point for the stage
