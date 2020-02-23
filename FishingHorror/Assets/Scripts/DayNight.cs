@@ -17,6 +17,9 @@ public class DayNight : MonoBehaviour
     [SerializeField, Tooltip("The light representing the sun/moon.")]
     private Light directionalLight;
 
+    private bool settingTime;
+    private int targetHour;
+
     #region Properties
 
     /// <summary>
@@ -90,6 +93,8 @@ public class DayNight : MonoBehaviour
     private void Awake()
     {
         time = startTime;
+
+        SetHour(10, 5);
     }
 
     void Update()
@@ -103,7 +108,16 @@ public class DayNight : MonoBehaviour
                 time -= cycleDuration;
             }
         }
-        
+
+        if (settingTime)
+        {
+            if(Hour == targetHour)
+            {
+                settingTime = false;
+                timeSpeed = 1;
+            }
+        }
+
         //Debug.Log("Current Time: " + GetTime() + ", " + CurrentTime);
         directionalLight.color = lightColor.Evaluate(PercentTime);
         directionalLight.intensity = lightIntensity.Evaluate(PercentTime).r;
@@ -141,6 +155,35 @@ public class DayNight : MonoBehaviour
         }
 
         return output;
+    }
+
+    /// <summary>
+    /// Sets the time to a specific hour over the specified number of seconds
+    /// </summary>
+    /// <param name="hour">The hour to change to</param>
+    /// <param name="duration">The time in seconds it should take to reach that hour</param>
+    public void SetHour(int hour, float duration)
+    {
+        targetHour = hour;
+
+        int hourChange = 0;
+
+        if(Hour < targetHour)
+        {
+            hourChange = targetHour - (Hour + 1);
+        }
+        else
+        {
+            hourChange = targetHour + (12 - (Hour + 1));
+        }
+
+        int minuteChange = 60 - Minute;
+
+        float secondChange = hourChange + (minuteChange / 60);
+        secondChange *= 3600;
+
+        timeSpeed = secondChange / duration;
+        settingTime = true;
     }
 
     #endregion
