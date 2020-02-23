@@ -130,7 +130,19 @@ public class DayNight : MonoBehaviour
         directionalLight.intensity = lightIntensity.Evaluate(PercentTime).r;
 
         //Set Rotation
+        float anglePercent = 2 * PercentTime;
+        if(anglePercent > 1)
+        {
+            anglePercent -= 1;
+        }
 
+        float targetAngle = 90 + (180 * anglePercent);
+        if(targetAngle > 180)
+        {
+            targetAngle -= 180;
+        }
+
+        directionalLight.transform.rotation = Quaternion.Euler(targetAngle, 0, 0);
     }
 
     #endregion
