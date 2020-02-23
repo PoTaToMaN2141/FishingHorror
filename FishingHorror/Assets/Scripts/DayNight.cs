@@ -102,8 +102,6 @@ public class DayNight : MonoBehaviour
     private void Awake()
     {
         time = startTime;
-
-        SetHour(10, 5);
     }
 
     void Update()
