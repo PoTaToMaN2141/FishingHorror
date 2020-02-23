@@ -175,7 +175,8 @@ MonoBehaviour:
   up: {fileID: 0}
   moveSpeed: 5
   moveForce: 100
-  lookSensetivity: {x: 2.5, y: 1}
+  lookSensetivity: {x: 0.09, y: 0.05}
+  verticalLookBounds: {x: -1.5, y: 1.5}
   boatTransform: {fileID: 0}
   lookTarget: {fileID: 7265640282462309801}
 --- !u!114 &7265640283813609207

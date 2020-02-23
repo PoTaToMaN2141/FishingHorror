@@ -594,5 +594,25 @@ PrefabInstance:
       propertyPath: boatTransform
       value: 
       objectReference: {fileID: 735339785}
+    - target: {fileID: 7265640283813609206, guid: af9cb5a21a3312c49809531bf7b1e673,
+        type: 3}
+      propertyPath: origin
+      value: 
+      objectReference: {fileID: 281101340}
+    - target: {fileID: 7265640283813609206, guid: af9cb5a21a3312c49809531bf7b1e673,
+        type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1347959179}
+    - target: {fileID: 7265640283813609206, guid: af9cb5a21a3312c49809531bf7b1e673,
+        type: 3}
+      propertyPath: forward
+      value: 
+      objectReference: {fileID: 1339962776}
+    - target: {fileID: 7265640283813609206, guid: af9cb5a21a3312c49809531bf7b1e673,
+        type: 3}
+      propertyPath: up
+      value: 
+      objectReference: {fileID: 288979522}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af9cb5a21a3312c49809531bf7b1e673, type: 3}
