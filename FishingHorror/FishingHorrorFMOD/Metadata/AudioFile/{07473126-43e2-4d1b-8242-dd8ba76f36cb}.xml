@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{07473126-43e2-4d1b-8242-dd8ba76f36cb}">
+		<property name="assetPath">
+			<value>479431__sheyvan__ambience-waves-beach-1.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>70.179645833333339</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{64392640-b366-4449-83af-7f1d8a129bbb}</destination>
+		</relationship>
+	</object>
+</objects>

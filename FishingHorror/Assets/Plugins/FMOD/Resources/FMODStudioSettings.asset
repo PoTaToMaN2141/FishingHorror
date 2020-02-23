@@ -15,7 +15,7 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: FishingHorrorFMOD\FishingHorrorFMOD.fspro
+  sourceProjectPath: FishingHorrorFMOD/FishingHorrorFMOD.fspro
   sourceBankPath: FishingHorrorFMOD\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
@@ -80,5 +80,6 @@ MonoBehaviour:
   - Master
   Banks:
   - 3D Sounds Test
+  - Menu
   BanksToLoad: []
   LiveUpdatePort: 9264
