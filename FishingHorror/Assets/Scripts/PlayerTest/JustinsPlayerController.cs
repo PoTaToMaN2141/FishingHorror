@@ -20,13 +20,15 @@ public class JustinsPlayerController : MonoBehaviour
     [SerializeField]
     private Vector2 lookSensetivity;
     [SerializeField]
+    private Vector2 verticalLookBounds;
+    [SerializeField]
     private Transform boatTransform;
     [SerializeField]
     private Transform lookTarget;
 
     private Transform cameraTransform;
 
-    private Quaternion orientation;
+    private Vector2 orientation;
     private Vector2 boatPosition;
     private Vector2 acceleration;
     private Vector2 velocity;
@@ -56,7 +58,20 @@ public class JustinsPlayerController : MonoBehaviour
     private void Update()
     {
         //Update Camera
-        //cameraTransform.rotation *= Quaternion.Euler(0 * lookInput.y * lookSensetivity.y * -1, lookInput.x * lookSensetivity.x, 0);
+        orientation += new Vector2(-1 * lookInput.x, lookInput.y) * lookSensetivity;
+        if(orientation.y < verticalLookBounds.x)
+        {
+            orientation.y = verticalLookBounds.x;
+        }
+        if (orientation.y > verticalLookBounds.y)
+        {
+            orientation.y = verticalLookBounds.y;
+        }
+
+        lookTarget.position = cameraTransform.position + 
+            right.position * (Mathf.Cos(orientation.x) * Mathf.Cos(orientation.y)) + 
+            up.position * (Mathf.Sin(orientation.y)) +
+            forward.position * (Mathf.Sin(orientation.x) * Mathf.Cos(orientation.y));
         cameraTransform.LookAt(lookTarget, up.position - origin.position);
 
         //Update Position
@@ -69,7 +84,7 @@ public class JustinsPlayerController : MonoBehaviour
         boatPosition += velocity * Time.deltaTime;
         acceleration = Vector2.zero;
 
-        transform.rotation = orientation * boatTransform.rotation;
+        //transform.rotation = orientation * boatTransform.rotation;
         transform.position = origin.position + (right.position * boatPosition.x) + origin.position + (forward.position * boatPosition.y);
     }
 
