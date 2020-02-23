@@ -60,6 +60,11 @@ public class CountFish : MonoBehaviour
         {
             fishCount++;
         }
+
+        //check fish counts for events
+        {
+            
+        }
     }
 
     /// <summary>

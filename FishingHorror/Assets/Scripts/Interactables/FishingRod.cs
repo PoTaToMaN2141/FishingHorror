@@ -4,14 +4,37 @@ using UnityEngine;
 
 public class FishingRod : InteractableObject
 {
-    private Bait baitScript;
+    //static instance of this script
+    public static FishingRod instance;
 
+    //transform for where the fish will spawn
     [SerializeField]
-    private bool isFishing = false;
+    private Transform fishSpawn;
+
+    //fish prefab
+    [SerializeField]
+    private GameObject fish;
+
+    //number of fish you can spawn
+    private int spawnableFish;
+
+    //list of fOsh numbers for events
+    [SerializeField]
+    public List<int> fishNumList;
 
     // Start is called before the first frame update
     void Start()
     {
+        //set up static instance
+        if(instance != null)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+
         name = "Fishing Rod";
     }
 
@@ -23,17 +46,17 @@ public class FishingRod : InteractableObject
 
     public override void Activate()
     {
-        GameObject[] baitObjs;
-        baitObjs = GameObject.FindGameObjectsWithTag("Bait");
-
-        foreach (GameObject bait in baitObjs)
+        //spawn a fish for the player if there are more than 0 spawnable fish
+        if(spawnableFish > 0)
         {
-            baitScript = bait.GetComponent<Bait>();
-            if(bait.GetComponent<Bait>().getIsThrowable())
-            {
-                isFishing = true;
-                Destroy(bait);
-            }
+            Instantiate(fish, fishSpawn, true);
+            spawnableFish--;
         }
+    }
+
+    public void SetEventFish(int eventIndex)
+    {
+        //give the player spawnable fish based on the current event
+        spawnableFish = fishNumList[eventIndex];
     }
 }

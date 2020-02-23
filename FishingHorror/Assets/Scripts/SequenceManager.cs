@@ -51,6 +51,7 @@ public class SequenceManager : MonoBehaviour
 
         //subscribe certain methods to fish event at the start of the game
         fishEvent += radio.GetComponent<Radio>().PlaySequenceClip;
+        fishEvent += FishingRod.instance.SetEventFish;
     }
 
     // Update is called once per frame
