@@ -55,7 +55,11 @@ public class CountFish : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //debug input to add fish to fish count
+        if(Input.GetKeyDown(KeyCode.Insert))
+        {
+            fishCount++;
+        }
     }
 
     /// <summary>

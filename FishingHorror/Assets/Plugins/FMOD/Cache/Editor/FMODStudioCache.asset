@@ -1,0 +1,281 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8361682410452063796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Menu.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/Menu.bank
+  SubDir: 
+  lastModified: 637180635912355406
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-6825269720127230897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/3D Sounds Test.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/3D Sounds Test.bank
+  SubDir: 
+  lastModified: 637180150180000103
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-6067973010013810933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/3D Sounds Test.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/3D Sounds Test.bank
+  SubDir: 
+  lastModified: 637180600817061837
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-5769193863663250592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/3D Sounds Test.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/3D Sounds Test.bank
+  SubDir: 
+  lastModified: 637180635912100826
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-5231476128657130677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637180635912137247
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-4556084213867903103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/3D Test
+  m_EditorClassIdentifier: 
+  Path: event:/3D Test
+  guid: 3cb8b30390de514caaa5bafa1deca921
+  Banks:
+  - {fileID: -5769193863663250592}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1010
+--- !u!114 &-4334468167318491681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637180150179262293
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-2623732924683652321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637180600817989362
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-859674620746058311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Theme
+  m_EditorClassIdentifier: 
+  Path: event:/Theme
+  guid: 72c32d869c09c24187d62b8c44dc9799
+  Banks:
+  - {fileID: -5231476128657130677}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1911
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 51029868844540713}
+  - {fileID: -5769193863663250592}
+  - {fileID: -5231476128657130677}
+  - {fileID: -8361682410452063796}
+  EditorEvents:
+  - {fileID: -859674620746058311}
+  - {fileID: -4556084213867903103}
+  - {fileID: 3703798872098645868}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -5231476128657130677}
+  StringsBanks:
+  - {fileID: 51029868844540713}
+  stringsBankWriteTime: 637180635912172821
+  cacheVersion: 3
+--- !u!114 &51029868844540713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637180635912172821
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 924
+  Exists: 1
+--- !u!114 &2787883820430007105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Menu.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/Menu.bank
+  SubDir: 
+  lastModified: 637180600832530771
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &3703798872098645868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Main Menu
+  m_EditorClassIdentifier: 
+  Path: event:/Main Menu
+  guid: b1cbc3bec10f454eb768b64572e14428
+  Banks:
+  - {fileID: -8361682410452063796}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 70179
+--- !u!114 &4783200052776515301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637180147914144720
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0

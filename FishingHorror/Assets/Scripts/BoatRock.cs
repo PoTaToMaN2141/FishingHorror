@@ -14,12 +14,6 @@ public class BoatRock : MonoBehaviour
     private GameObject boat; //A reference to our boat
     private Vector3 boatTransform; //A placeholder for the boat's euler angles
 
-    [SerializeField]
-    private GameObject waterPlane; //A reference to our water
-
-    [SerializeField]
-    private PlayerMove moveScript;
-
     // Start is called before the first frame update
     void Start()
     {
