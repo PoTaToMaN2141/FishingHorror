@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//delegate for game events
+public delegate void FishEvent(int eventIndex);
+
 public class SequenceManager : MonoBehaviour
 {
-    //field for the next threshold of fish the player has to catch to advance to the next sequence
-    private int nextFishThreshold = 0;
+    //static instance of this class
+    public static SequenceManager instance;
 
-    //list of fish thresholds based on events the player experiences
-    public List<int> fishThresholdList;
+    //the index for events occurring in the game
+    public int eventIndex;
+    private int prevIndex;
 
     //list of time thresholds for game stages
     [Tooltip("Note: When setting time thresholds, try to keep increments in hours! There are 3600 seconds in an hour.")]
@@ -19,14 +23,25 @@ public class SequenceManager : MonoBehaviour
     private GameObject timeObject;
     private DayNight timeCycle;
 
-    //field for the scriptable object that contains the library of the games' fish
-    [SerializeField]
-    private FishLibrary fishLibrary;
-    private Dictionary<int, List<GameObject>> library = new Dictionary<int, List<GameObject>>();
-
     //field for the radio
     [SerializeField]
     private GameObject radio;
+
+    //event handler
+    public event FishEvent fishEvent;
+
+    private void Awake()
+    {
+        //set up static instance
+        if(instance != null)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -34,59 +49,35 @@ public class SequenceManager : MonoBehaviour
         //save reference to time cycle
         timeCycle = timeObject.GetComponent<DayNight>();
 
-        //set up fish library
-        library[0] = fishLibrary.stageOneFish;
-        library[1] = fishLibrary.stageTwoFish;
-        library[2] = fishLibrary.stageThreeFish;
-        library[3] = fishLibrary.stageFourFish;
+        //subscribe certain methods to fish event at the start of the game
+        fishEvent += radio.GetComponent<Radio>().PlaySequenceClip;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //TODO: check fish count to determine whether or not to start next stage of the game
-        if(CountFish.instance.fishCount == nextFishThreshold)
+        //start next event if the index has changed
+        if(eventIndex != prevIndex)
         {
-            //TODO: allow time to advance to next stage
-            //TODO: If time hasn't completely passed from the previous stage, quickly advance it forward
-            if(DayNight.Paused != true)
-            {
-                //increase the speed of time
-                timeCycle.TimeSpeed = 4000f;
-                Debug.Log("Speeding up time to match the player");
-            }
-            else
-            {
-                DayNight.Paused = false;
-            }
-
-            //increase fish threshold
-            nextFishThreshold += fishThresholdList[0];
-            Debug.Log("Next Threshold for Fish: " + nextFishThreshold + "\nFish Count: " + CountFish.instance.fishCount);
-
-            //remove first member of the fish threshold list
-            fishThresholdList.RemoveAt(0);
-
-            //TODO: change the kinds of fish the player can catch
-
-            //TODO: play an audio clip based on the sequence the player is in
-            radio.GetComponent<Radio>().PlaySequenceClip(0);
-            radio.GetComponent<Radio>().sequenceClips.RemoveAt(0);
+            //activate next event
+            fishEvent(eventIndex);
         }
 
         //check if the current time has reached the stopping point for the stage
-        if(timeCycle.CurrentTime >= timeThresholdList[0])
+        if(timeCycle.CurrentTime >= timeThresholdList[eventIndex])
         {
             //Debug for stopped time
             Debug.Log("Time has stopped. Catch more fish to resume time.");
 
             //pause time and set new time threshold
             DayNight.Paused = true;
-            timeThresholdList.RemoveAt(0);
 
             //reset time cycle scale
             //TODO: change this to match actual scale instead of test scale
             timeCycle.TimeSpeed = 3600f;
         }
+
+        //set previous index to current index
+        prevIndex = eventIndex;
     }
 }
