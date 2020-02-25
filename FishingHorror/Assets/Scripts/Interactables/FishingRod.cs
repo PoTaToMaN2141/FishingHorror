@@ -16,7 +16,7 @@ public class FishingRod : InteractableObject
     private GameObject fish;
 
     //number of fish you can spawn
-    private int spawnableFish;
+    public int spawnableFish;
 
     //list of fOsh numbers for events
     [SerializeField]

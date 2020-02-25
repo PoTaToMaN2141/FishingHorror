@@ -63,7 +63,11 @@ public class CountFish : MonoBehaviour
 
         //check fish counts for events
         {
-            
+            if(FishingRod.instance.spawnableFish == 0 && SequenceManager.instance.eventIndex != 3)
+            {
+                //increase event index
+                SequenceManager.instance.eventIndex++;
+            }
         }
     }
 
