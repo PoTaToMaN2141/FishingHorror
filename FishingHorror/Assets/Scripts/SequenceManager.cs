@@ -19,8 +19,6 @@ public class SequenceManager : MonoBehaviour
     public List<int> timeThresholdList;
 
     //field for the object that holds the daynight script and the script itself
-    [SerializeField]
-    private GameObject timeObject;
     private DayNight timeCycle;
 
     //field for the radio
@@ -47,7 +45,7 @@ public class SequenceManager : MonoBehaviour
     void Start()
     {
         //save reference to time cycle
-        timeCycle = timeObject.GetComponent<DayNight>();
+        timeCycle = GetComponent<DayNight>();
 
         //subscribe certain methods to fish event at the start of the game
         fishEvent += radio.GetComponent<Radio>().PlaySequenceClip;

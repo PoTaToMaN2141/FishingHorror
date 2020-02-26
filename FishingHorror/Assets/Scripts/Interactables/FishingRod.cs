@@ -36,6 +36,9 @@ public class FishingRod : InteractableObject
             instance = this;
         }
 
+        //make sure not to skip the first event
+        eventFish = 1;
+
         name = "Fishing Rod";
     }
 

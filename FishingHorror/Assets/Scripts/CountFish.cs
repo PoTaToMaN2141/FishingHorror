@@ -68,6 +68,7 @@ public class CountFish : MonoBehaviour
                 //increase event index
                 SequenceManager.instance.eventIndex++;
 
+
                 //reset fishcount
                 fishCount = 0;
             }
