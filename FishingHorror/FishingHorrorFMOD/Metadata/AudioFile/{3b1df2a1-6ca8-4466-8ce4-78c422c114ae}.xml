@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{3b1df2a1-6ca8-4466-8ce4-78c422c114ae}">
+		<property name="assetPath">
+			<value>Ambience/412942__radam04__lake-at-night-1.aiff</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>170.25341666666668</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{64392640-b366-4449-83af-7f1d8a129bbb}</destination>
+		</relationship>
+	</object>
+</objects>

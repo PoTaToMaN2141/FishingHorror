@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.05036679, g: 0.06969033, b: 0.10653919, a: 1}
+  m_IndirectSpecularColor: {r: 0.09158659, g: 0.07279406, b: 0.112278275, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -250,7 +250,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -289,7 +289,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 20000
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -481,33 +481,6 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   directionalLight: {fileID: 335612058}
---- !u!1 &350461530 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5049500819726901668, guid: 978eaa034aad51045916747b59615588,
-    type: 3}
-  m_PrefabInstance: {fileID: 1322324568661892432}
-  m_PrefabAsset: {fileID: 0}
---- !u!81 &350461531
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 350461530}
-  m_Enabled: 1
---- !u!114 &350461534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 350461530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be024a87b6a73ae459a05a7c3935cdd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSpeed: 50
 --- !u!1 &441168021
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,7 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441482e8936e35048a1dffac814e3ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Profile: {fileID: 11400000, guid: 4772de34d5c7a4c4b9d6bab8509270bf, type: 2}
+  m_Profile: {fileID: 11400000, guid: 17582d81d201bec4b8037820c37ba778, type: 2}
   m_StaticLightingSkyUniqueID: 2
 --- !u!114 &512837850
 MonoBehaviour:
@@ -711,7 +684,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 4772de34d5c7a4c4b9d6bab8509270bf, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 17582d81d201bec4b8037820c37ba778, type: 2}
 --- !u!4 &512837851
 Transform:
   m_ObjectHideFlags: 0
@@ -1020,12 +993,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &906593977 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5049500819072136033, guid: 978eaa034aad51045916747b59615588,
-    type: 3}
-  m_PrefabInstance: {fileID: 1322324568661892432}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1037553402 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7023427555454159284, guid: 978eaa034aad51045916747b59615588,
@@ -1045,7 +1012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/Main Menu
+  Event: event:/Main Menu 2
   PlayEvent: 1
   StopEvent: 15
   AllowFadeout: 1
@@ -1787,6 +1754,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -215857826797495635, guid: 978eaa034aad51045916747b59615588,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1629894917, guid: 978eaa034aad51045916747b59615588, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.143
@@ -1799,10 +1771,20 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 665681548166881216, guid: 978eaa034aad51045916747b59615588,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1322324568529147057, guid: 978eaa034aad51045916747b59615588,
         type: 3}
       propertyPath: m_Name
       value: WorldManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322324568529147057, guid: 978eaa034aad51045916747b59615588,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1322324568529147059, guid: 978eaa034aad51045916747b59615588,
         type: 3}
@@ -1863,12 +1845,12 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 350461530}
+      objectReference: {fileID: 0}
     - target: {fileID: 2695373659771118029, guid: 978eaa034aad51045916747b59615588,
         type: 3}
       propertyPath: playerCamera
       value: 
-      objectReference: {fileID: 906593977}
+      objectReference: {fileID: 0}
     - target: {fileID: 2777952584960997824, guid: 978eaa034aad51045916747b59615588,
         type: 3}
       propertyPath: fogObject
@@ -2104,8 +2086,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1936eda7065ba4428d9b2bca6b649d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishThresholdList: 01000000030000000300000002000000
+  eventIndex: 0
   timeThresholdList: 60540000a08c000000e1000020fd0000
-  timeObject: {fileID: 335612057}
-  fishLibrary: {fileID: 11400000, guid: 748964cd86bc5c049b4665d246444661, type: 2}
   radio: {fileID: 1322324568661892434}
