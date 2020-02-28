@@ -13,6 +13,15 @@ public class Radio : InteractableObject
     //list of random positive lines for catching fish
     public List<AudioClip> fishCatchingClips;
 
+    //bool to check if the radio is on
+    private bool radioOn = true;
+
+    //radio bool accessor
+    public bool RadioOn
+    {
+        get { return radioOn; } set { radioOn = value; }
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +41,8 @@ public class Radio : InteractableObject
 
     public override void Activate()
     {
-        //TODO: turn radio on/off when activated
+        //turn radio on/off when activated
+        radioOn = !radioOn;
     }
 
     /// <summary>
@@ -42,7 +52,10 @@ public class Radio : InteractableObject
     public void PlaySequenceClip(int clipIndex)
     {
         //play the clip at the index
-        objectAudio.PlayOneShot(sequenceClips[clipIndex]);
+        if(radioOn != false)
+        {
+            objectAudio.PlayOneShot(sequenceClips[clipIndex]);
+        }
     }
 
     /// <summary>
@@ -51,10 +64,14 @@ public class Radio : InteractableObject
     /// <param name="clipList"> the list of potential audio clips to pull from</param>
     public void PlayRandomClip(List<AudioClip> clipList)
     {
-        //get a random number based on the number of clips in the passed-in list
-        int clipIndex = Random.Range(0, clipList.Count);
+        //check if the radio is on
+        if(radioOn != false)
+        {
+            //get a random number based on the number of clips in the passed-in list
+            int clipIndex = Random.Range(0, clipList.Count);
 
-        //play the clip
-        objectAudio.PlayOneShot(clipList[clipIndex]);
+            //play the clip
+            objectAudio.PlayOneShot(clipList[clipIndex]);
+        }
     }
 }

@@ -78,6 +78,7 @@ public class JustinsPlayerController : MonoBehaviour
         angle = cameraTransform.rotation.eulerAngles.y * Mathf.Deg2Rad * -1;
         Vector2 moveDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * moveInput.x + new Vector2(Mathf.Cos(angle + Mathf.PI / 2), Mathf.Sin(angle + Mathf.PI / 2)) * moveInput.y;
         Move(moveDirection);
+        Debug.Log(moveDirection);
 
         //Update Physics
         velocity += acceleration * Time.deltaTime;

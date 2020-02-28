@@ -1221,7 +1221,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventIndex: 0
   timeThresholdList: 60540000a08c000000e1000020fd0000
-  timeObject: {fileID: 335612057}
   radio: {fileID: 1322324568661892434}
 --- !u!1001 &4697805505387495002
 PrefabInstance:

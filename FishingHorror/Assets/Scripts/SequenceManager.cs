@@ -18,8 +18,9 @@ public class SequenceManager : MonoBehaviour
     [Tooltip("Note: When setting time thresholds, try to keep increments in hours! There are 3600 seconds in an hour.")]
     public List<int> timeThresholdList;
 
-    //field for the object that holds the daynight script and the script itself
+    //field for the object that holds the daynight script and the amount of time it takes to change time
     private DayNight timeCycle;
+    public int phaseSeconds;
 
     //field for the radio
     [SerializeField]
@@ -60,6 +61,11 @@ public class SequenceManager : MonoBehaviour
         {
             //activate next event
             fishEvent(eventIndex);
+
+            //move time forward
+            timeCycle.SetHour(timeThresholdList[eventIndex], phaseSeconds);
+
+            //radio stuff
         }
 
         //check if the current time has reached the stopping point for the stage
