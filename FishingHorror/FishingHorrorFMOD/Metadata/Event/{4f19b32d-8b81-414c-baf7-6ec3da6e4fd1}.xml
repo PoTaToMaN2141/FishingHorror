@@ -5,7 +5,7 @@
 			<value>Main Menu 2</value>
 		</property>
 		<property name="outputFormat">
-			<value>5</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{68e0fafb-e4cf-4fea-b21f-9fb25a7faa26}</destination>
@@ -132,18 +132,29 @@
 		</relationship>
 	</object>
 	<object class="SoundScatterer" id="{a8a798a3-d37c-45aa-8d29-0bf9dc4dc8db}">
-		<property name="name" />
 		<property name="minimumTimeBetweenSounds">
 			<value>4000</value>
 		</property>
 		<property name="maximumTimeBetweenSounds">
 			<value>23500</value>
 		</property>
+		<property name="maximumScatterDistance">
+			<value>4</value>
+		</property>
+		<property name="volumeRandomization">
+			<value>-1</value>
+		</property>
 		<relationship name="sound">
 			<destination>{bec20667-1caa-45a2-ba53-169fe2221162}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{fb93e9e5-5d5f-47a8-aa4e-cbbbce15deca}">
+		<property name="overridingInputFormat">
+			<value>1</value>
+		</property>
+		<property name="inputFormatOverridden">
+			<value>true</value>
+		</property>
 		<property name="name">
 			<value>Audio 3</value>
 		</property>
@@ -180,7 +191,14 @@
 			<destination>{0244c38b-5fe7-4224-9dfc-c3d1e62cb679}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{7a37472d-cf41-4cb0-bff7-a997e496cace}" />
+	<object class="MixerBusPanner" id="{7a37472d-cf41-4cb0-bff7-a997e496cace}">
+		<property name="overridingOutputFormat">
+			<value>1</value>
+		</property>
+		<property name="outputFormatOverridden">
+			<value>true</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{d55c6585-e118-4ca6-96a3-f436fa3c11b8}" />
 	<object class="MixerBusFader" id="{ba376cd0-127d-448b-acd2-294f961e60cf}" />
 	<object class="SingleSound" id="{779a8886-484a-49ea-a74f-c684a27ae4b8}">

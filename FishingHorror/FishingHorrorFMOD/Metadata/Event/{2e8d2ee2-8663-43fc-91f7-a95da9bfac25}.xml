@@ -5,7 +5,7 @@
 			<value>Main Menu 2D</value>
 		</property>
 		<property name="outputFormat">
-			<value>5</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{68e0fafb-e4cf-4fea-b21f-9fb25a7faa26}</destination>
@@ -93,6 +93,12 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{9e9a98c2-88a3-4701-a877-797985b299ae}">
+		<property name="overridingInputFormat">
+			<value>1</value>
+		</property>
+		<property name="inputFormatOverridden">
+			<value>true</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{5fc15ac6-9b1b-4433-a212-b423637fffaf}</destination>
 		</relationship>
@@ -132,7 +138,6 @@
 		</relationship>
 	</object>
 	<object class="SoundScatterer" id="{bcfcdd3f-c063-49db-97e5-f2136653704f}">
-		<property name="name" />
 		<property name="minimumTimeBetweenSounds">
 			<value>4000</value>
 		</property>
@@ -144,6 +149,12 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{c068e944-db31-419a-9820-fc514bf8be7b}">
+		<property name="overridingInputFormat">
+			<value>1</value>
+		</property>
+		<property name="inputFormatOverridden">
+			<value>true</value>
+		</property>
 		<property name="name">
 			<value>Audio 2</value>
 		</property>
@@ -162,7 +173,14 @@
 			<destination>{ef35f704-1725-4f91-870c-c4fedebfe213}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{25fb4fc4-e1eb-497d-aa7f-349bd052ae07}" />
+	<object class="MixerBusPanner" id="{25fb4fc4-e1eb-497d-aa7f-349bd052ae07}">
+		<property name="overridingOutputFormat">
+			<value>1</value>
+		</property>
+		<property name="outputFormatOverridden">
+			<value>true</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{3ed4817b-39ee-4aea-9099-c1f295317992}" />
 	<object class="MixerBusEffectChain" id="{fcb66285-4c8c-4660-adfc-a4898a2b3cbb}">
 		<relationship name="effects">
