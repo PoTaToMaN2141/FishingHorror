@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{375d3997-be95-46fe-8f5e-4ae054ec847a}">
 		<property name="assetPath">
-			<value>118859__saphe__birds-on-the-lake.wav</value>
+			<value>Ambience/118859__saphe__birds-on-the-lake.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
