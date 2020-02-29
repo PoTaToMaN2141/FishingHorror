@@ -48,10 +48,10 @@ public class ThrowableObject : InteractableObject
         if(isThrowable == true)
         {
             //show object that player is holding in front of them
-            Vector3 holdVector = WorldManager.instance.player.transform.forward.normalized;
+            Vector3 holdVector = WorldManager.instance.playerCamera.transform.forward.normalized;
             holdVector = Quaternion.AngleAxis(holdAngle, Vector3.up) * holdVector;
             holdVector *= holdDistance;
-            transform.position = WorldManager.instance.player.transform.position + holdVector;
+            transform.position = WorldManager.instance.playerCamera.transform.position + holdVector;
             transform.forward = Vector3.up;
 
             if (Input.GetKeyDown(KeyCode.Mouse0))
