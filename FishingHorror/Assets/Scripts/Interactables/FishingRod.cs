@@ -37,7 +37,7 @@ public class FishingRod : InteractableObject
         }
 
         //make sure not to skip the first event
-        eventFish = 1;
+        SetEventFish(0);
 
         name = "Fishing Rod";
     }
@@ -45,7 +45,7 @@ public class FishingRod : InteractableObject
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(spawnableFish);
     }
 
     public override void Activate()
@@ -53,7 +53,7 @@ public class FishingRod : InteractableObject
         //spawn a fish for the player if there are more than 0 spawnable fish
         if(spawnableFish > 0)
         {
-            Instantiate(fish, fishSpawn, true);
+            Instantiate(fish, fishSpawn.position, Quaternion.identity);
             spawnableFish--;
         }
     }

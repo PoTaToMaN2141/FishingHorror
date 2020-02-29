@@ -42,7 +42,14 @@ public class Radio : InteractableObject
     public override void Activate()
     {
         //turn radio on/off when activated
-        radioOn = !radioOn;
+        if(GetComponent<Radio>().enabled == true)
+        {
+            radioOn = !radioOn;
+        }
+        else
+        {
+            GetComponent<ThrowableObject>().Activate();
+        }
     }
 
     /// <summary>
