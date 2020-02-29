@@ -335,7 +335,7 @@ MonoBehaviour:
   Path: event:/3D Test
   guid: 3cb8b30390de514caaa5bafa1deca921
   Banks:
-  - {fileID: 417663538685973542}
+  - {fileID: 6802220064381055734}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -343,6 +343,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1010
+--- !u!114 &-4477677974118659539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Menu.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/Menu.bank
+  SubDir: 
+  lastModified: 637185140826470732
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-4334468167318491681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,6 +484,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-2429248906929133395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main Menu 2D/Parameter 1
+  m_EditorClassIdentifier: 
+  Name: Parameter 1
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-2370891360919632020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,12 +534,12 @@ MonoBehaviour:
   Path: event:/Main Menu 2
   guid: 2db3194f818b4c41baf76ec3da6e4fd1
   Banks:
-  - {fileID: -9196651585708433416}
+  - {fileID: 277026398125367953}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 1112581260873043652}
+  - {fileID: -287917177462073341}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -577,7 +612,7 @@ MonoBehaviour:
   Path: event:/Theme
   guid: 72c32d869c09c24187d62b8c44dc9799
   Banks:
-  - {fileID: -9196651585708433416}
+  - {fileID: 277026398125367953}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -602,6 +637,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-287917177462073341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main Menu 2/Parameter 1
+  m_EditorClassIdentifier: 
+  Name: Parameter 1
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-169895298954982527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -634,9 +686,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 51029868844540713}
-  - {fileID: 417663538685973542}
-  - {fileID: -9196651585708433416}
-  - {fileID: 9184302439769276201}
+  - {fileID: 6802220064381055734}
+  - {fileID: 277026398125367953}
+  - {fileID: -4477677974118659539}
   EditorEvents:
   - {fileID: -859674620746058311}
   - {fileID: -4556084213867903103}
@@ -645,10 +697,10 @@ MonoBehaviour:
   - {fileID: 7670379103791189875}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -9196651585708433416}
+  - {fileID: 277026398125367953}
   StringsBanks:
   - {fileID: 51029868844540713}
-  stringsBankWriteTime: 637185007440000000
+  stringsBankWriteTime: 637185140826258367
   cacheVersion: 3
 --- !u!114 &51029868844540713
 MonoBehaviour:
@@ -664,7 +716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FishingHorrorFMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637185007440000000
+  lastModified: 637185140826258367
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -688,6 +740,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &277026398125367953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637185140826176278
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &417663538685973542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,7 +930,7 @@ MonoBehaviour:
   Path: event:/Main Menu
   guid: b1cbc3bec10f454eb768b64572e14428
   Banks:
-  - {fileID: 9184302439769276201}
+  - {fileID: -4477677974118659539}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1100,6 +1170,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &6802220064381055734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/3D Sounds Test.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/3D Sounds Test.bank
+  SubDir: 
+  lastModified: 637185140825953529
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &7002250900782552387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1187,12 +1275,12 @@ MonoBehaviour:
   Path: event:/Main Menu 2D
   guid: e22e8d2e6386fc4391f7a95da9bfac25
   Banks:
-  - {fileID: 9184302439769276201}
+  - {fileID: -4477677974118659539}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 2528756896859752993}
+  - {fileID: -2429248906929133395}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
