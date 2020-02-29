@@ -18,6 +18,10 @@ public class JustinsPlayerController : MonoBehaviour
     [SerializeField]
     private float moveForce;
     [SerializeField]
+    private Vector2 minBoatBounds;
+    [SerializeField]
+    private Vector2 maxBoatBounds;
+    [SerializeField]
     private Vector2 lookSensetivity;
     [SerializeField]
     private Vector2 verticalLookBounds;
@@ -29,7 +33,7 @@ public class JustinsPlayerController : MonoBehaviour
     private Transform cameraTransform;
 
     private Vector2 orientation;
-    private Vector2 boatPosition;
+    private Vector2 boatPosition = new Vector2(0, -7.5f);
     private Vector2 acceleration;
     private Vector2 velocity;
 
@@ -78,12 +82,32 @@ public class JustinsPlayerController : MonoBehaviour
         angle = cameraTransform.rotation.eulerAngles.y * Mathf.Deg2Rad * -1;
         Vector2 moveDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * moveInput.x + new Vector2(Mathf.Cos(angle + Mathf.PI / 2), Mathf.Sin(angle + Mathf.PI / 2)) * moveInput.y;
         Move(moveDirection);
-        Debug.Log(moveDirection);
 
         //Update Physics
         velocity += acceleration * Time.deltaTime;
         boatPosition += velocity * Time.deltaTime;
         acceleration = Vector2.zero;
+
+        //Keep the player in the play area
+        if(boatPosition.x > maxBoatBounds.x)
+        {
+            boatPosition.x = maxBoatBounds.x;
+        }
+
+        if (boatPosition.x < minBoatBounds.x)
+        {
+            boatPosition.x = minBoatBounds.x;
+        }
+
+        if (boatPosition.y > maxBoatBounds.y)
+        {
+            boatPosition.y = maxBoatBounds.y;
+        }
+
+        if (boatPosition.y < minBoatBounds.y)
+        {
+            boatPosition.y = minBoatBounds.y;
+        }
 
         //transform.rotation = orientation * boatTransform.rotation;
         transform.position = origin.position + (right.position * boatPosition.x) + origin.position + (forward.position * boatPosition.y);
