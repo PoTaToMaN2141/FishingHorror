@@ -5,7 +5,7 @@
 			<value>Radio Stations</value>
 		</property>
 		<relationship name="folder">
-			<destination>{68e0fafb-e4cf-4fea-b21f-9fb25a7faa26}</destination>
+			<destination>{75da70a4-c1cf-41be-b082-298a1f1a94e4}</destination>
 		</relationship>
 	</object>
 </objects>

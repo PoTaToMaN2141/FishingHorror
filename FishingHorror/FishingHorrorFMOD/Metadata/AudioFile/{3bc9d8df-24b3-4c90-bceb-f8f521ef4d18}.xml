@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{3bc9d8df-24b3-4c90-bceb-f8f521ef4d18}">
+		<property name="assetPath">
+			<value>Dialogue/Friendly/Humming.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>28.278095238095236</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{64392640-b366-4449-83af-7f1d8a129bbb}</destination>
+		</relationship>
+	</object>
+</objects>

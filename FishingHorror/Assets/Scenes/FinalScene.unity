@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.04404199, g: 0.062071577, b: 0.09927575, a: 1}
+  m_IndirectSpecularColor: {r: 0.0439717, g: 0.061968163, b: 0.09909694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -468,7 +468,7 @@ PrefabInstance:
     - target: {fileID: 7265640283813609206, guid: af9cb5a21a3312c49809531bf7b1e673,
         type: 3}
       propertyPath: lookSensetivity.x
-      value: 0.05
+      value: 0.035
       objectReference: {fileID: 0}
     - target: {fileID: 7265640283813609206, guid: af9cb5a21a3312c49809531bf7b1e673,
         type: 3}
@@ -489,6 +489,16 @@ PrefabInstance:
         type: 3}
       propertyPath: maxBoatBounds.x
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7265640283813609206, guid: af9cb5a21a3312c49809531bf7b1e673,
+        type: 3}
+      propertyPath: lookSensetivity.y
+      value: 0.035
+      objectReference: {fileID: 0}
+    - target: {fileID: 7265640284500880426, guid: af9cb5a21a3312c49809531bf7b1e673,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af9cb5a21a3312c49809531bf7b1e673, type: 3}
@@ -532,6 +542,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactDistance: 2
+--- !u!114 &999335318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999335308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1001 &1038780624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1244,6 +1267,60 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2107260455}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2139936073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2139936075}
+  - component: {fileID: 2139936074}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2139936074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139936073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Main Menu 2
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!4 &2139936075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139936073}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.096146, y: -3.8490353, z: 13.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &28377271547158478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1662,6 +1739,7 @@ GameObject:
   - component: {fileID: 7501264421360604097}
   - component: {fileID: 7501264421360604098}
   - component: {fileID: 7501264421360604099}
+  - component: {fileID: 7501264421360604100}
   m_Layer: 0
   m_Name: Radio
   m_TagString: Untagged
@@ -1732,6 +1810,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7501264421360604100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7501264421360604095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Dialogue/Part 0/Radio Stations/Radio 1
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0.9339075
+  OverrideMaxDistance: 7.9456234
 --- !u!4 &7861224999853960745
 Transform:
   m_ObjectHideFlags: 0

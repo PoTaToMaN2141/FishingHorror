@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{90a5b27d-9798-4418-954c-48e0286507b4}">
+		<property name="name">
+			<value>Annoyance</value>
+		</property>
+		<relationship name="folder">
+			<destination>{bf55d042-2d4a-42d4-a388-766722c47efd}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{bce342ac-450d-4f9d-92a8-bff494bbfb2d}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{bce342ac-450d-4f9d-92a8-bff494bbfb2d}">
+		<property name="maximum">
+			<value>6.0999999999999996</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

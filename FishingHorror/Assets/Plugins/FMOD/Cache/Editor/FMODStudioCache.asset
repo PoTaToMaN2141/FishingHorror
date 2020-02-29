@@ -36,6 +36,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-8982889194254255402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 0/Radio Stations/Radio 3
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 0/Radio Stations/Radio 3
+  guid: d315c38abc17054892b538e8b8366385
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 51431
 --- !u!114 &-8737705429035357008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +148,52 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-7992934801355101925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 4/(Hungry) It's Not Enough
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 4/(Hungry) It's Not Enough
+  guid: 0ff28416df7a4246aeb6438a1e20aeb4
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10699
+--- !u!114 &-7758434509492132509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 4/Evil Laugh (Death)
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 4/Evil Laugh (Death)
+  guid: 6d85295ac7c99f46902b055d0b630f7e
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 9191
 --- !u!114 &-7594066020772750874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +230,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-7019659252860639621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 2/Fog Rolling In
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 2/Fog Rolling In
+  guid: ed4725eb70c15c4c98b34f010b22ad3b
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
 --- !u!114 &-6954579059886208583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,13 +355,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/New Event
   guid: d7e2aa30f50e634a86856a899c0a39ca
-  Banks:
-  - {fileID: -7594066020772750874}
+  Banks: []
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -3022186762575707345}
+  - {fileID: -1638180842103889261}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -345,6 +436,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-5715766559527393820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 3/Post-Sacrifice
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 3/Post-Sacrifice
+  guid: 8e3bebf613755a4293037d78b8aa2138
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 9627
 --- !u!114 &-5702198365907573631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,8 +561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/3D Test
   guid: 3cb8b30390de514caaa5bafa1deca921
-  Banks:
-  - {fileID: -6068073858280420127}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -509,6 +622,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-3516359257142167434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 1/2 Fish Caught
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 1/2 Fish Caught
+  guid: 354b9b79b19ec745945ea6a9e4586b28
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1800
 --- !u!114 &-3080407476886402561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,6 +732,29 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-2434194642420973780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 3/ID_Disappointed
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 3/ID_Disappointed
+  guid: 3521e64a1aaac3498c52210fda0a3ab5
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 13401
 --- !u!114 &-2370891360919632020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -614,6 +773,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-2161056778617846291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 0/Radio Stations/Radio Change
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 0/Radio Stations/Radio Change
+  guid: f1b04c47be79164bba2e150a010291a3
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1704404773653638406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -629,15 +811,32 @@ MonoBehaviour:
   Path: event:/Main Menu 2
   guid: 2db3194f818b4c41baf76ec3da6e4fd1
   Banks:
-  - {fileID: -6125254151028475938}
+  - {fileID: -786250541813408053}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 7253626333707300532}
+  - {fileID: 530311664664890233}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-1638180842103889261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/New Event/Parameter 2
+  m_EditorClassIdentifier: 
+  Name: Parameter 2
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-1411893884444619834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,6 +873,46 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-1193659622672289571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 4/Demand
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 4/Demand
+  guid: 1e14e06373cf1b48916a56edc0833494
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
+--- !u!114 &-1154562186430174174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main Menu 2/Parameter 1
+  m_EditorClassIdentifier: 
+  Name: Parameter 1
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-1127764223029693864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,6 +931,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-1018891447457920165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 3/ID_Smug
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 3/ID_Smug
+  guid: 111606bedba0074aad4996e2519bf61c
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 13411
 --- !u!114 &-859674620746058311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,8 +968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Theme
   guid: 72c32d869c09c24187d62b8c44dc9799
-  Banks:
-  - {fileID: -6125254151028475938}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -715,6 +976,47 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1911
+--- !u!114 &-790553265982265090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 1/Creepy Fish (Caught)
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 1/Creepy Fish (Caught)
+  guid: 92de5f2032acb94bbe7058f361b5c247
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6100
+--- !u!114 &-786250541813408053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637185406194142347
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-734145171843878248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -781,22 +1083,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 51029868844540713}
-  - {fileID: -6068073858280420127}
-  - {fileID: -6125254151028475938}
-  - {fileID: -7594066020772750874}
+  - {fileID: 5230468614413011405}
+  - {fileID: -786250541813408053}
+  - {fileID: 1722678213271947710}
   EditorEvents:
-  - {fileID: -859674620746058311}
-  - {fileID: -4556084213867903103}
-  - {fileID: 3703798872098645868}
   - {fileID: -1704404773653638406}
-  - {fileID: 7670379103791189875}
-  - {fileID: -6223473261822447895}
+  - {fileID: -7992934801355101925}
+  - {fileID: -1018891447457920165}
+  - {fileID: -1193659622672289571}
+  - {fileID: -2434194642420973780}
+  - {fileID: -3516359257142167434}
+  - {fileID: 4715077522228377980}
+  - {fileID: 5810396937521785557}
+  - {fileID: -7758434509492132509}
+  - {fileID: 3610629145728349661}
+  - {fileID: -5715766559527393820}
+  - {fileID: -790553265982265090}
+  - {fileID: 8182056985549399196}
+  - {fileID: 4661503347779553761}
+  - {fileID: 6673814247051928600}
+  - {fileID: -8982889194254255402}
+  - {fileID: 8709369997464348358}
+  - {fileID: -7019659252860639621}
+  - {fileID: 642493831042248156}
+  - {fileID: 583169964336241859}
+  - {fileID: -2161056778617846291}
+  - {fileID: 7372944126359146869}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -6125254151028475938}
+  - {fileID: -786250541813408053}
   StringsBanks:
   - {fileID: 51029868844540713}
-  stringsBankWriteTime: 637185165379046105
+  stringsBankWriteTime: 637185406194481457
   cacheVersion: 3
 --- !u!114 &51029868844540713
 MonoBehaviour:
@@ -812,11 +1130,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FishingHorrorFMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637185165379046105
+  lastModified: 637185406194481457
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1148
+    Value: 1996
   Exists: 1
 --- !u!114 &138593426139470269
 MonoBehaviour:
@@ -855,6 +1173,86 @@ MonoBehaviour:
   FileSizes: []
   Exists: 1
 --- !u!114 &445655894653165246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main Menu 2D/Parameter 1
+  m_EditorClassIdentifier: 
+  Name: Parameter 1
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &530311664664890233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main Menu 2/Parameter 1
+  m_EditorClassIdentifier: 
+  Name: Parameter 1
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &583169964336241859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 2/Time Goes By
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 2/Time Goes By
+  guid: f15283b1595a904f9bd2b2a5b1ff2bce
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 32000
+--- !u!114 &642493831042248156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 0/Radio Stations/Radio 1
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 0/Radio Stations/Radio 1
+  guid: efdc1874f4719f4f991348eb18e9d790
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42083
+--- !u!114 &893576373684029832
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -924,6 +1322,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &1722678213271947710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Menu.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/Menu.bank
+  SubDir: 
+  lastModified: 637185406194990075
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &2050751304343811760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,6 +1427,48 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &3495941158214221021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/3D Sounds Test.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/3D Sounds Test.bank
+  SubDir: 
+  lastModified: 637185320396529162
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3610629145728349661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 2/Increasing Aggresion
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 2/Increasing Aggresion
+  guid: 7087f79fe682a441a6b7606d0666a60c
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 4458456559313439034}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3703798872098645868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,8 +1483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Main Menu
   guid: b1cbc3bec10f454eb768b64572e14428
-  Banks:
-  - {fileID: -7594066020772750874}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1052,6 +1509,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &4458456559313439034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Increasing Aggresion/Annoyance
+  m_EditorClassIdentifier: 
+  Name: Annoyance
+  Min: 0
+  Max: 6.1
+  Default: 0
+  Exists: 1
 --- !u!114 &4598434360717553201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,6 +1544,52 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &4661503347779553761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 0/Radio Stations/Radio 2
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 0/Radio Stations/Radio 2
+  guid: bb81b9cda91fd44bb405282054187ec6
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 61673
+--- !u!114 &4715077522228377980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 3/SG_Hurry
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 3/SG_Hurry
+  guid: 41f21810065d694cb32aa497375a84e8
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4455
 --- !u!114 &4783200052776515301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,6 +1643,24 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &5230468614413011405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/3D Sounds Test.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/3D Sounds Test.bank
+  SubDir: 
+  lastModified: 637185406160530488
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &5410155797093713236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1139,6 +1677,24 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  Exists: 0
+--- !u!114 &5655126976983870008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637185320396569057
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &5754721186052457197
 MonoBehaviour:
@@ -1158,6 +1714,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &5810396937521785557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 1/1 Fish Caught
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 1/1 Fish Caught
+  guid: 4a6fc40441a62a4bb0e77ba3e7ad44ad
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2400
 --- !u!114 &5988466297835806649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1248,6 +1827,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &6673814247051928600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 1/Creepy Fish (Warning)
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 1/Creepy Fish (Warning)
+  guid: c1bc757bbba5a946b146bce8533799fd
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
 --- !u!114 &6756328541980163803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1319,6 +1921,47 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &7326395240589878788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Menu.bank
+  m_EditorClassIdentifier: 
+  Path: FishingHorrorFMOD/Build/Desktop/Menu.bank
+  SubDir: 
+  lastModified: 637185320396608952
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &7372944126359146869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 3/Back From the Depths
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 3/Back From the Depths
+  guid: fda2152cf7745a4f9299668024ad3ed8
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 23373
 --- !u!114 &7482781895603839821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1369,13 +2012,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Main Menu 2D
   guid: e22e8d2e6386fc4391f7a95da9bfac25
-  Banks:
-  - {fileID: -7594066020772750874}
+  Banks: []
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 7833028233024245315}
+  - {fileID: 893576373684029832}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1431,6 +2073,29 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &8182056985549399196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 2/Nostalgic Monologue
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 2/Nostalgic Monologue
+  guid: 9d1498cb8ad2da488495361dd1f92e36
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 27000
 --- !u!114 &8313828122086004283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1485,6 +2150,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &8709369997464348358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/Part 1/Voice Start
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/Part 1/Voice Start
+  guid: dfe8f252ca1d794289a41aa7d3cf20ef
+  Banks:
+  - {fileID: -786250541813408053}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11800
 --- !u!114 &8723708855119742488
 MonoBehaviour:
   m_ObjectHideFlags: 0
