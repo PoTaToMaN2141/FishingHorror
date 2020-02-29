@@ -43,6 +43,11 @@ public class Radio : InteractableObject
     {
         //turn radio on/off when activated
         radioOn = !radioOn;
+
+        if (radioOn)
+            SendMessage("Play");
+        else
+            SendMessage("Stop");
     }
 
     /// <summary>
