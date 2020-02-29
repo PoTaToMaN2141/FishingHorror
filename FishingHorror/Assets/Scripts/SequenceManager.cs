@@ -71,20 +71,6 @@ public class SequenceManager : MonoBehaviour
             //radio stuff
         }
 
-        //check if the current time has reached the stopping point for the stage
-        if(timeCycle.CurrentTime >= timeThresholdList[eventIndex])
-        {
-            //Debug for stopped time
-            Debug.Log("Time has stopped. Catch more fish to resume time.");
-
-            //pause time and set new time threshold
-            DayNight.Paused = true;
-
-            //reset time cycle scale
-            //TODO: change this to match actual scale instead of test scale
-            timeCycle.TimeSpeed = 3600f;
-        }
-
         //set previous index to current index
         prevIndex = eventIndex;
     }

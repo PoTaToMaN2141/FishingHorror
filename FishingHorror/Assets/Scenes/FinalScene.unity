@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0439717, g: 0.061968163, b: 0.09909694, a: 1}
+  m_IndirectSpecularColor: {r: 0.04404199, g: 0.062071577, b: 0.09927575, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -371,6 +371,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: knife
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 431609cc07fc37a44bf5985c49139e69,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 431609cc07fc37a44bf5985c49139e69, type: 3}
 --- !u!1001 &999335306
@@ -684,7 +689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventIndex: 0
   timeThresholdList: 050000000a000000020000000500000009000000
-  phaseSeconds: 0
+  phaseSeconds: 60
   radio: {fileID: 7501264421360604095}
 --- !u!114 &1038780627
 MonoBehaviour:
@@ -1019,6 +1024,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 76.90003, y: 20.40381, z: 1.0928147e-12}
   m_Center: {x: 38.450047, y: -10.201905, z: -0.000015258789}
+--- !u!1 &1665900785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9119031622285767397, guid: 54195c32cf0d06f4ab787ff89d877ca5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2053382437}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1665900789
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665900785}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 0, z: 100}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1801956928 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 24001916598245563, guid: 5e79402b180b16949a9cba43a3f31a4c,
@@ -1219,6 +1243,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.008
       objectReference: {fileID: 0}
+    - target: {fileID: 24001916598245561, guid: 5e79402b180b16949a9cba43a3f31a4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5a9aae2e33a75d748a90ca52d2f69d11, type: 2}
     - target: {fileID: 24001916598245563, guid: 5e79402b180b16949a9cba43a3f31a4c,
         type: 3}
       propertyPath: m_Name
